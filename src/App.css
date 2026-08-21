@@ -1,4 +1,7 @@
-* {
+html {
+  scroll-behavior: smooth;
+}* 
+{
   box-sizing: border-box;
 }
 
@@ -118,7 +121,7 @@
   width: 100%;
 
   margin-top: 90px;
-  padding-bottom: 10px;
+  padding-bottom: 60px;
 
   display: flex;
   justify-content: space-between;
@@ -621,5 +624,137 @@
 
   .stat-text {
     font-size: 15px;
+  }
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section {
+  width: 100%;
+  padding: 80px 12%;
+  border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+.services-label {
+  margin: 0;
+  text-align: center;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: rgb(26, 184, 149);
+}
+
+.services-title {
+  margin-top: 15px;
+  margin-bottom: 50px;
+
+  text-align: center;
+
+  font-size: 34px;
+  font-weight: 600;
+
+  color: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  min-height: 180px;
+
+  padding: 25px;
+
+  border: 1px solid rgb(45, 53, 67);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.service-icon {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  font-size: 25px;
+}
+
+.service-card h3 {
+  margin: 0 0 12px 0;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: white;
+}
+
+.service-card p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: rgb(130, 151, 184);
+}
+
+
+/* =========================
+   SERVICES TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .services-section {
+    padding: 70px 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   SERVICES MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .services-section {
+    padding: 60px 20px;
+  }
+
+  .services-title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 14px;
   }
 }
