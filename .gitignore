@@ -11,8 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-src/components/Introduction.jsx
-src/components/Footer.jsx
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
