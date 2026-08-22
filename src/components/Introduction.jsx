@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import DoctorImage from "../assets/IMG1.png"
 export default function Introduction() {
   return (
     <div className="intro">
@@ -38,8 +39,7 @@ export default function Introduction() {
         </div>
       </div>
       <div className="intro-right">
-        <img src="https://picsum.photos/500/600?grayscale" alt="Doc Image" />
-        {/*Adjust Image*/}
+        <img src={DoctorImage} alt="Doc Image" />
       </div>
     </div>
   );
