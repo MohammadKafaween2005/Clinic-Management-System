@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
-}* 
-{
+}
+* {
   box-sizing: border-box;
 }
 
@@ -112,7 +112,6 @@ html {
   cursor: pointer;
 }
 
-
 /* =========================
    INTRODUCTION
 ========================= */
@@ -130,7 +129,6 @@ html {
   border-bottom: 1px solid rgb(75, 75, 75);
 }
 
-
 /* =========================
    INTRO LEFT
 ========================= */
@@ -140,7 +138,6 @@ html {
 
   padding-left: 50px;
 }
-
 
 /* Accepting New Patients */
 
@@ -159,7 +156,6 @@ html {
   background-color: rgb(1, 26, 0);
 }
 
-
 /* Main Title */
 
 .title {
@@ -167,7 +163,6 @@ html {
 
   padding: 2px 10px;
 }
-
 
 /* Green Title */
 
@@ -179,7 +174,6 @@ html {
 
   color: rgb(26, 184, 149);
 }
-
 
 /* Introduction Paragraph */
 
@@ -195,7 +189,6 @@ html {
   max-width: 650px;
 }
 
-
 /* =========================
    INTRO BUTTONS
 ========================= */
@@ -208,7 +201,6 @@ html {
 
   margin-top: 20px;
 }
-
 
 /* Book Appointment Button */
 
@@ -231,7 +223,6 @@ html {
   background-color: rgb(1, 26, 0);
 }
 
-
 /* Learn More */
 
 .intro-learnmore {
@@ -243,7 +234,6 @@ html {
   color: rgb(222, 223, 224);
   text-decoration: none;
 }
-
 
 /* =========================
    INTRO STATS
@@ -260,7 +250,6 @@ html {
   margin-left: 40px;
 }
 
-
 /* Individual Statistic */
 
 .stat {
@@ -271,7 +260,6 @@ html {
   gap: 8px;
 }
 
-
 /* Number */
 
 .stat-number {
@@ -280,7 +268,6 @@ html {
 
   color: rgb(81, 226, 195);
 }
-
 
 /* Description */
 
@@ -292,7 +279,6 @@ html {
 
   color: rgb(175, 188, 185);
 }
-
 
 /* =========================
    INTRO RIGHT / IMAGE
@@ -313,13 +299,11 @@ html {
   border-radius: 12px;
 }
 
-
 /* ==================================================
    TABLET / MOBILE
 ================================================== */
 
 @media (max-width: 768px) {
-
   /* =========================
      MOBILE NAVBAR
   ========================= */
@@ -434,7 +418,6 @@ html {
     padding: 12px;
   }
 
-
   /* =========================
      MOBILE INTRO
   ========================= */
@@ -547,13 +530,11 @@ html {
   }
 }
 
-
 /* ==================================================
    SMALL PHONES
 ================================================== */
 
 @media (max-width: 480px) {
-
   .navbar {
     padding: 12px 14px;
   }
@@ -626,7 +607,6 @@ html {
     font-size: 15px;
   }
 }
-
 
 /* =========================
    SERVICES
@@ -708,13 +688,11 @@ html {
   color: rgb(130, 151, 184);
 }
 
-
 /* =========================
    SERVICES TABLET
 ========================= */
 
 @media (max-width: 900px) {
-
   .services-section {
     padding: 70px 40px;
   }
@@ -724,13 +702,11 @@ html {
   }
 }
 
-
 /* =========================
    SERVICES MOBILE
 ========================= */
 
 @media (max-width: 600px) {
-
   .services-section {
     padding: 60px 20px;
   }
@@ -756,5 +732,258 @@ html {
 
   .service-card p {
     font-size: 14px;
+  }
+}
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+  width: 100%;
+  min-height: 75vh;
+
+  padding: 100px 12%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 80px;
+
+  border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.about-benefits {
+  width: 45%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+
+/* Cards */
+
+.about-card {
+  min-height: 180px;
+
+  padding: 25px;
+
+  border: 1px solid rgb(45, 53, 67);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+
+/* Icon */
+
+.about-icon {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 23px;
+}
+
+
+/* Card Title */
+
+.about-card h3 {
+  margin: 0 0 12px 0;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: white;
+}
+
+
+/* Card Description */
+
+.about-card p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: rgb(130, 151, 184);
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.about-doctor {
+  width: 50%;
+
+  max-width: 650px;
+}
+
+
+/* ABOUT THE DOCTOR */
+
+.about-label {
+  margin: 0 0 15px 0;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: rgb(26, 184, 149);
+}
+
+
+/* Main Heading */
+
+.about-title {
+  margin: 0 0 25px 0;
+
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  color: white;
+}
+
+
+/* Paragraph */
+
+.about-description {
+  margin: 0 0 20px 0;
+
+  max-width: 650px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: rgb(175, 188, 205);
+}
+
+
+/* Slightly muted second paragraph */
+
+.about-description.secondary {
+  color: rgb(130, 151, 184);
+}
+
+
+/* =========================
+   TAGS
+========================= */
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+
+.about-tags span {
+  padding: 6px 14px;
+
+  font-size: 13px;
+
+  color: rgb(81, 226, 195);
+
+  border: 1px solid rgb(12, 105, 95);
+  border-radius: 20px;
+
+  background-color: rgb(3, 42, 43);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .about-page {
+    padding: 80px 40px;
+
+    flex-direction: column;
+
+    gap: 60px;
+  }
+
+
+  .about-benefits {
+    width: 100%;
+
+    max-width: 700px;
+  }
+
+
+  .about-doctor {
+    width: 100%;
+
+    max-width: 700px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .about-page {
+    padding: 60px 20px;
+
+    gap: 50px;
+  }
+
+
+  .about-benefits {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .about-card {
+    min-height: auto;
+
+    padding: 22px;
+  }
+
+
+  .about-label {
+    font-size: 12px;
+  }
+
+
+  .about-title {
+    font-size: 29px;
+  }
+
+
+  .about-description {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+
+  .about-tags {
+    gap: 8px;
+  }
+
+
+  .about-tags span {
+    font-size: 12px;
+
+    padding: 6px 11px;
   }
 }
