@@ -1,6 +1,8 @@
 import Introduction from "../components/Introduction";
 import Services from "../components/Services";
 import About from "../components/About";
+import Contact from "../components/Contact";
+import ClinicLocation from "../components/ClinicLocation";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Introduction />
       <Services />
       <About />
+      <Contact />
+            <ClinicLocation />
     </>
   );
 }
