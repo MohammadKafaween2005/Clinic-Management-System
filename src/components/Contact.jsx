@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Contact() {
   return (
-    <section className="contact-page">
+    <section className="contact-page" id="contact">
       <div className="contact-left">
         <p className="contact-label">FIND US</p>
         <h1 className="contact-title">Visit the clinic</h1>
@@ -10,9 +10,7 @@ export default function Contact() {
         <div className="contact-details">
           <div className="contact-info">
             <span className="contact-info-label">Address</span>
-            <span className="contact-info-value">
-              Ibn Khaldoun St., Amman
-            </span>
+            <span className="contact-info-value">Ibn Khaldoun St., Amman</span>
           </div>
 
           <div className="contact-info">
@@ -22,9 +20,7 @@ export default function Contact() {
 
           <div className="contact-info">
             <span className="contact-info-label">Email</span>
-            <span className="contact-info-value">
-              DummyData.com
-            </span>
+            <span className="contact-info-value">DummyData.com</span>
           </div>
         </div>
       </div>

@@ -17,10 +17,10 @@ export default function Navbar() {
 
       <div className={`nav-menu ${menuOpen ? "open" : ""}`}>
         <div className="mid-sec">
-          <Link to="/">Home</Link>
-          <Link to="/About">About</Link>
-          <Link to="/Services">Services</Link>
-          <Link to="/Contact">Contact</Link>
+          <a href="#top">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
         </div>
 
         <div className="right-sec">
