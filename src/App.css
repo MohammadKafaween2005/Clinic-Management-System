@@ -11,16 +11,18 @@ html {
 
 .navbar {
   width: 100%;
-  margin-top: 20px;
-  padding-bottom: 10px;
+  padding: 15px 0;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 1px solid white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-  position: relative;
+  background-color: rgb(10, 15, 23);
+  border-bottom: 1px solid white;
 }
 
 /* Logo */
@@ -62,7 +64,6 @@ html {
 .mid-sec {
   display: flex;
   align-items: center;
-
   gap: 50px;
 
   margin-left: auto;
@@ -74,7 +75,6 @@ html {
 .right-sec {
   display: flex;
   align-items: center;
-
   gap: 50px;
 
   margin-right: 40px;
@@ -111,7 +111,6 @@ html {
 
   cursor: pointer;
 }
-
 /* =========================
    INTRODUCTION
 ========================= */
@@ -1484,5 +1483,509 @@ html {
     width: 100%;
 
     text-align: center;
+  }
+}
+
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 420px 1fr;
+
+  background-color: rgb(12, 17, 25);
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.login-intro {
+  min-height: 100vh;
+
+  padding: 45px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-right: 1px solid rgb(45, 53, 67);
+
+  background-color: rgb(10, 15, 23);
+}
+
+
+/* Back */
+
+.login-back {
+  margin-bottom: 50px;
+
+  font-size: 14px;
+
+  color: rgb(130, 151, 184);
+
+  text-decoration: none;
+}
+
+
+/* Brand */
+
+.login-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: white;
+}
+
+
+.login-logo {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+
+  font-weight: 700;
+}
+
+
+/* Welcome Text */
+
+.login-intro-text {
+  margin-top: 70px;
+}
+
+
+.login-intro-text h1 {
+  margin: 0 0 20px;
+
+  font-size: 38px;
+  font-weight: 600;
+
+  color: white;
+}
+
+
+.login-intro-text p {
+  max-width: 300px;
+
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: rgb(130, 151, 184);
+}
+
+
+/* Quote Card */
+
+.login-quote {
+  margin-top: auto;
+
+  padding: 24px;
+
+  border: 1px solid rgb(45, 53, 67);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+
+.quote-text {
+  margin: 0 0 25px;
+
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.7;
+
+  color: rgb(175, 188, 205);
+}
+
+
+.login-quote h3 {
+  margin: 0 0 5px;
+
+  font-size: 15px;
+
+  color: white;
+}
+
+
+.quote-role {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: rgb(130, 151, 184);
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.login-form-section {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px;
+}
+
+
+.login-form-container {
+  width: 100%;
+
+  max-width: 420px;
+}
+
+
+.login-form-container h2 {
+  margin: 0 0 8px;
+
+  font-size: 30px;
+
+  color: white;
+}
+
+
+.login-subtitle {
+  margin: 0 0 35px;
+
+  font-size: 15px;
+
+  color: rgb(130, 151, 184);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.login-form {
+  width: 100%;
+}
+
+
+.login-field {
+  margin-bottom: 22px;
+}
+
+
+.login-field label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 14px;
+
+  color: rgb(175, 188, 205);
+}
+
+
+.login-field input {
+  width: 100%;
+
+  padding: 15px 16px;
+
+  border: 1px solid rgb(45, 53, 67);
+  border-radius: 10px;
+
+  outline: none;
+
+  background-color: rgb(18, 26, 42);
+
+  color: white;
+
+  font-size: 15px;
+}
+
+
+.login-field input::placeholder {
+  color: rgb(100, 115, 140);
+}
+
+
+/* Password Heading */
+
+.password-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 9px;
+}
+
+
+.password-heading label {
+  margin: 0;
+}
+
+
+.password-heading a {
+  font-size: 13px;
+
+  color: rgb(81, 226, 195);
+
+  text-decoration: none;
+}
+
+
+/* Password Input */
+
+.password-input-wrapper {
+  position: relative;
+}
+
+
+.password-input-wrapper input {
+  padding-right: 50px;
+}
+
+
+.password-toggle {
+  position: absolute;
+
+  right: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: none;
+
+  background: transparent;
+
+  color: rgb(130, 151, 184);
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   SIGN IN BUTTON
+========================= */
+
+.login-submit {
+  width: 100%;
+
+  margin-top: 3px;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   REGISTER
+========================= */
+
+.register-text {
+  margin-top: 25px;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  color: rgb(130, 151, 184);
+}
+
+
+.register-text a {
+  color: rgb(81, 226, 195);
+
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .login-page {
+    grid-template-columns: 330px 1fr;
+  }
+
+
+  .login-intro {
+    padding: 35px;
+  }
+
+
+  .login-form-section {
+    padding: 40px;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+  .login-page {
+    display: block;
+  }
+
+
+  .login-intro {
+    min-height: auto;
+
+    padding: 25px 20px 35px;
+
+    border-right: none;
+    border-bottom: 1px solid rgb(45, 53, 67);
+  }
+
+
+  .login-back {
+    margin-bottom: 30px;
+  }
+
+
+  .login-intro-text {
+    margin-top: 45px;
+  }
+
+
+  .login-intro-text h1 {
+    font-size: 31px;
+  }
+
+
+  .login-quote {
+    display: none;
+  }
+
+
+  .login-form-section {
+    min-height: auto;
+
+    padding: 50px 20px;
+  }
+
+
+  .login-form-container {
+    max-width: none;
+  }
+
+
+  .login-form-container h2 {
+    font-size: 27px;
+  }
+
+}
+
+
+
+.footer {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px 12%;
+
+  border-top: 1px solid rgb(45, 53, 67);
+
+  background-color: rgb(10, 15, 23);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: rgb(130, 151, 184);
+
+  font-size: 14px;
+}
+
+.footer-logo {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+
+  font-weight: 700;
+}
+
+.footer-copy {
+  margin: 0;
+
+  color: rgb(90, 110, 140);
+
+  font-size: 13px;
+}
+
+.footer-login {
+  color: rgb(81, 226, 195);
+
+  font-size: 13px;
+
+  text-decoration: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .footer {
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
   }
 }
