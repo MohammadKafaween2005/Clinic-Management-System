@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import BookAppointment from "./pages/BookAppointment";
+import Doctor from "./pages/Doctor";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         />
 
         <Route path="/Login" element={<Login />} />
+        <Route path="/Doctor" element={<Doctor />} />
 
         <Route path="/BookAppointment" element={<BookAppointment />} />
       </Routes>
