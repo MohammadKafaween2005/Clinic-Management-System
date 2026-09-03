@@ -752,7 +752,6 @@ html {
   border-bottom: 1px solid rgb(75, 75, 75);
 }
 
-
 /* =========================
    LEFT SIDE
 ========================= */
@@ -765,7 +764,6 @@ html {
 
   gap: 20px;
 }
-
 
 /* Cards */
 
@@ -780,7 +778,6 @@ html {
   background-color: rgb(18, 26, 42);
 }
 
-
 /* Icon */
 
 .about-icon {
@@ -790,7 +787,6 @@ html {
 
   font-size: 23px;
 }
-
 
 /* Card Title */
 
@@ -803,7 +799,6 @@ html {
   color: white;
 }
 
-
 /* Card Description */
 
 .about-card p {
@@ -815,7 +810,6 @@ html {
   color: rgb(130, 151, 184);
 }
 
-
 /* =========================
    RIGHT SIDE
 ========================= */
@@ -825,7 +819,6 @@ html {
 
   max-width: 650px;
 }
-
 
 /* ABOUT THE DOCTOR */
 
@@ -839,7 +832,6 @@ html {
   color: rgb(26, 184, 149);
 }
 
-
 /* Main Heading */
 
 .about-title {
@@ -851,7 +843,6 @@ html {
 
   color: white;
 }
-
 
 /* Paragraph */
 
@@ -866,13 +857,11 @@ html {
   color: rgb(175, 188, 205);
 }
 
-
 /* Slightly muted second paragraph */
 
 .about-description.secondary {
   color: rgb(130, 151, 184);
 }
-
 
 /* =========================
    TAGS
@@ -887,7 +876,6 @@ html {
   margin-top: 30px;
 }
 
-
 .about-tags span {
   padding: 6px 14px;
 
@@ -901,13 +889,11 @@ html {
   background-color: rgb(3, 42, 43);
 }
 
-
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .about-page {
     padding: 80px 40px;
 
@@ -916,13 +902,11 @@ html {
     gap: 60px;
   }
 
-
   .about-benefits {
     width: 100%;
 
     max-width: 700px;
   }
-
 
   .about-doctor {
     width: 100%;
@@ -931,19 +915,16 @@ html {
   }
 }
 
-
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .about-page {
     padding: 60px 20px;
 
     gap: 50px;
   }
-
 
   .about-benefits {
     grid-template-columns: 1fr;
@@ -951,34 +932,28 @@ html {
     gap: 15px;
   }
 
-
   .about-card {
     min-height: auto;
 
     padding: 22px;
   }
 
-
   .about-label {
     font-size: 12px;
   }
 
-
   .about-title {
     font-size: 29px;
   }
-
 
   .about-description {
     font-size: 16px;
     line-height: 1.7;
   }
 
-
   .about-tags {
     gap: 8px;
   }
-
 
   .about-tags span {
     font-size: 12px;
@@ -1006,7 +981,6 @@ html {
   border-bottom: 1px solid rgb(75, 75, 75);
 }
 
-
 /* =========================
    CONTACT LEFT
 ========================= */
@@ -1015,7 +989,6 @@ html {
   width: 50%;
   max-width: 600px;
 }
-
 
 /* Small green heading */
 
@@ -1030,7 +1003,6 @@ html {
   letter-spacing: 2px;
 }
 
-
 /* Main Heading */
 
 .contact-title {
@@ -1042,7 +1014,6 @@ html {
   font-weight: 600;
 }
 
-
 /* Contact details container */
 
 .contact-details {
@@ -1051,7 +1022,6 @@ html {
 
   gap: 20px;
 }
-
 
 /* Individual contact row */
 
@@ -1069,7 +1039,6 @@ html {
   background-color: rgb(18, 26, 42);
 }
 
-
 /* Address / Phone / Email */
 
 .contact-info-label {
@@ -1082,7 +1051,6 @@ html {
   font-size: 13px;
 }
 
-
 /* Actual information */
 
 .contact-info-value {
@@ -1094,7 +1062,6 @@ html {
   overflow-wrap: anywhere;
 }
 
-
 /* =========================
    CONTACT RIGHT
 ========================= */
@@ -1104,13 +1071,11 @@ html {
   max-width: 600px;
 }
 
-
 /* Opening hours */
 
 .opening-hours {
   width: 100%;
 }
-
 
 /* Each opening-hour row */
 
@@ -1130,7 +1095,6 @@ html {
   border-bottom: 1px solid rgb(45, 53, 67);
 }
 
-
 /* Green opening time */
 
 .hours-open {
@@ -1139,13 +1103,11 @@ html {
   font-weight: 600;
 }
 
-
 /* Closed */
 
 .hours-closed {
   color: rgb(100, 110, 125);
 }
-
 
 /* =========================
    BOOK APPOINTMENT BUTTON
@@ -1174,28 +1136,23 @@ html {
   background-color: rgb(26, 184, 149);
 }
 
-
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .contact-page {
     padding: 80px 40px;
 
     gap: 50px;
   }
-
 }
-
 
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .contact-page {
     min-height: auto;
 
@@ -1206,7 +1163,6 @@ html {
     gap: 60px;
   }
 
-
   .contact-left,
   .contact-right {
     width: 100%;
@@ -1214,18 +1170,15 @@ html {
     max-width: none;
   }
 
-
   .contact-title {
     font-size: 29px;
 
     margin-bottom: 30px;
   }
 
-
   .contact-info {
     padding: 15px;
   }
-
 
   .contact-info-label {
     width: 75px;
@@ -1233,18 +1186,15 @@ html {
     font-size: 12px;
   }
 
-
   .contact-info-value {
     font-size: 14px;
   }
-
 
   .hours-row {
     font-size: 14px;
 
     gap: 20px;
   }
-
 
   .contact-book-button {
     margin-top: 30px;
@@ -1263,7 +1213,6 @@ html {
 
   border-bottom: 1px solid rgb(75, 75, 75);
 }
-
 
 /* Heading */
 
@@ -1303,7 +1252,6 @@ html {
   color: rgb(130, 151, 184);
 }
 
-
 /* =========================
    MAP
 ========================= */
@@ -1331,7 +1279,6 @@ html {
   border: 0;
 }
 
-
 /* =========================
    LOCATION DETAILS
 ========================= */
@@ -1355,7 +1302,6 @@ html {
   background-color: rgb(18, 26, 42);
 }
 
-
 .location-small-label {
   display: block;
 
@@ -1369,7 +1315,6 @@ html {
   color: rgb(26, 184, 149);
 }
 
-
 .location-details h3 {
   margin: 0;
 
@@ -1378,7 +1323,6 @@ html {
   color: white;
 }
 
-
 .location-details p {
   margin: 0;
 
@@ -1386,7 +1330,6 @@ html {
 
   color: rgb(175, 188, 205);
 }
-
 
 /* Directions */
 
@@ -1407,27 +1350,22 @@ html {
   background-color: rgb(26, 184, 149);
 }
 
-
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .clinic-location {
     padding: 70px 40px;
   }
-
 
   .map-container {
     height: 400px;
   }
 
-
   .location-details {
     grid-template-columns: 1fr 1fr;
   }
-
 
   .directions-button {
     grid-column: 1 / -1;
@@ -1436,37 +1374,30 @@ html {
   }
 }
 
-
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .clinic-location {
     padding: 60px 20px;
   }
-
 
   .location-heading {
     margin-bottom: 35px;
   }
 
-
   .location-heading h2 {
     font-size: 29px;
   }
-
 
   .location-heading > p:last-child {
     font-size: 15px;
   }
 
-
   .map-container {
     height: 320px;
   }
-
 
   .location-details {
     grid-template-columns: 1fr;
@@ -1476,7 +1407,6 @@ html {
     padding: 20px;
   }
 
-
   .directions-button {
     grid-column: auto;
 
@@ -1485,8 +1415,6 @@ html {
     text-align: center;
   }
 }
-
-
 
 /* =========================
    LOGIN PAGE
@@ -1501,7 +1429,6 @@ html {
 
   background-color: rgb(12, 17, 25);
 }
-
 
 /* =========================
    LEFT SIDE
@@ -1520,7 +1447,6 @@ html {
   background-color: rgb(10, 15, 23);
 }
 
-
 /* Back */
 
 .login-back {
@@ -1532,7 +1458,6 @@ html {
 
   text-decoration: none;
 }
-
 
 /* Brand */
 
@@ -1547,7 +1472,6 @@ html {
 
   color: white;
 }
-
 
 .login-logo {
   width: 38px;
@@ -1566,13 +1490,11 @@ html {
   font-weight: 700;
 }
 
-
 /* Welcome Text */
 
 .login-intro-text {
   margin-top: 70px;
 }
-
 
 .login-intro-text h1 {
   margin: 0 0 20px;
@@ -1582,7 +1504,6 @@ html {
 
   color: white;
 }
-
 
 .login-intro-text p {
   max-width: 300px;
@@ -1594,7 +1515,6 @@ html {
 
   color: rgb(130, 151, 184);
 }
-
 
 /* Quote Card */
 
@@ -1609,7 +1529,6 @@ html {
   background-color: rgb(18, 26, 42);
 }
 
-
 .quote-text {
   margin: 0 0 25px;
 
@@ -1620,7 +1539,6 @@ html {
   color: rgb(175, 188, 205);
 }
 
-
 .login-quote h3 {
   margin: 0 0 5px;
 
@@ -1629,7 +1547,6 @@ html {
   color: white;
 }
 
-
 .quote-role {
   margin: 0;
 
@@ -1637,7 +1554,6 @@ html {
 
   color: rgb(130, 151, 184);
 }
-
 
 /* =========================
    RIGHT SIDE
@@ -1653,13 +1569,11 @@ html {
   padding: 60px;
 }
 
-
 .login-form-container {
   width: 100%;
 
   max-width: 420px;
 }
-
 
 .login-form-container h2 {
   margin: 0 0 8px;
@@ -1669,7 +1583,6 @@ html {
   color: white;
 }
 
-
 .login-subtitle {
   margin: 0 0 35px;
 
@@ -1677,7 +1590,6 @@ html {
 
   color: rgb(130, 151, 184);
 }
-
 
 /* =========================
    FORM
@@ -1687,11 +1599,9 @@ html {
   width: 100%;
 }
 
-
 .login-field {
   margin-bottom: 22px;
 }
-
 
 .login-field label {
   display: block;
@@ -1702,7 +1612,6 @@ html {
 
   color: rgb(175, 188, 205);
 }
-
 
 .login-field input {
   width: 100%;
@@ -1721,11 +1630,9 @@ html {
   font-size: 15px;
 }
 
-
 .login-field input::placeholder {
   color: rgb(100, 115, 140);
 }
-
 
 /* Password Heading */
 
@@ -1737,11 +1644,9 @@ html {
   margin-bottom: 9px;
 }
 
-
 .password-heading label {
   margin: 0;
 }
-
 
 .password-heading a {
   font-size: 13px;
@@ -1751,18 +1656,15 @@ html {
   text-decoration: none;
 }
 
-
 /* Password Input */
 
 .password-input-wrapper {
   position: relative;
 }
 
-
 .password-input-wrapper input {
   padding-right: 50px;
 }
-
 
 .password-toggle {
   position: absolute;
@@ -1780,7 +1682,6 @@ html {
 
   cursor: pointer;
 }
-
 
 /* =========================
    SIGN IN BUTTON
@@ -1806,7 +1707,6 @@ html {
   cursor: pointer;
 }
 
-
 /* =========================
    REGISTER
 ========================= */
@@ -1821,47 +1721,38 @@ html {
   color: rgb(130, 151, 184);
 }
 
-
 .register-text a {
   color: rgb(81, 226, 195);
 
   text-decoration: none;
 }
 
-
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .login-page {
     grid-template-columns: 330px 1fr;
   }
-
 
   .login-intro {
     padding: 35px;
   }
 
-
   .login-form-section {
     padding: 40px;
   }
-
 }
-
 
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 700px) {
-
   .login-page {
     display: block;
   }
-
 
   .login-intro {
     min-height: auto;
@@ -1872,26 +1763,21 @@ html {
     border-bottom: 1px solid rgb(45, 53, 67);
   }
 
-
   .login-back {
     margin-bottom: 30px;
   }
-
 
   .login-intro-text {
     margin-top: 45px;
   }
 
-
   .login-intro-text h1 {
     font-size: 31px;
   }
 
-
   .login-quote {
     display: none;
   }
-
 
   .login-form-section {
     min-height: auto;
@@ -1899,19 +1785,14 @@ html {
     padding: 50px 20px;
   }
 
-
   .login-form-container {
     max-width: none;
   }
 
-
   .login-form-container h2 {
     font-size: 27px;
   }
-
 }
-
-
 
 .footer {
   width: 100%;
@@ -1970,11 +1851,9 @@ html {
   text-decoration: none;
 }
 
-
 /* MOBILE */
 
 @media (max-width: 700px) {
-
   .footer {
     flex-direction: column;
 
@@ -1987,5 +1866,2640 @@ html {
 
   .footer-brand {
     justify-content: center;
+  }
+}
+.register-link {
+  border: none;
+  background: none;
+  padding: 0;
+
+  color: rgb(81, 226, 195);
+  font: inherit;
+
+  cursor: pointer;
+}
+
+/* =========================
+   DOCTOR PAGE
+========================= */
+
+.doctor-page {
+  min-height: 100vh;
+  background-color: rgb(10, 15, 23);
+}
+/* =========================
+   DOCTOR PAGE
+========================= */
+
+.doctor-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: rgb(10, 15, 23);
+  color: white;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.doctor-sidebar {
+  width: 240px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(9, 14, 22);
+  border-right: 1px solid rgb(40, 50, 65);
+
+  z-index: 1000;
+}
+
+/* =========================
+   SIDEBAR BRAND
+========================= */
+
+.sidebar-brand {
+  height: 75px;
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 18px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.sidebar-logo {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  background-color: rgb(26, 184, 149);
+
+  border-radius: 10px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sidebar-clinic-name {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: white;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 28px 12px;
+}
+
+.sidebar-link {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 13px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: none;
+
+  color: rgb(130, 151, 184);
+
+  font-family: inherit;
+  font-size: 14px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.sidebar-link:hover {
+  color: rgb(81, 226, 195);
+
+  background-color: rgba(26, 184, 149, 0.08);
+}
+
+.sidebar-link.active {
+  color: rgb(81, 226, 195);
+
+  background-color: rgba(26, 184, 149, 0.16);
+}
+
+.sidebar-icon {
+  width: 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+}
+
+/* =========================
+   SIDEBAR BOTTOM
+========================= */
+
+.sidebar-bottom {
+  margin-top: auto;
+
+  padding: 24px 20px;
+
+  border-top: 1px solid rgb(40, 50, 65);
+}
+
+.sidebar-doctor {
+  margin-bottom: 25px;
+}
+
+.sidebar-doctor h4 {
+  margin: 0 0 6px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar-doctor p {
+  margin: 0;
+
+  color: rgb(81, 226, 195);
+
+  font-size: 12px;
+}
+
+.sidebar-logout {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgb(130, 151, 184);
+
+  font-size: 14px;
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.sidebar-logout:hover {
+  color: white;
+}
+
+/* =========================
+   MAIN DOCTOR AREA
+========================= */
+
+.doctor-content {
+  min-height: 100vh;
+
+  margin-left: 240px;
+
+  padding: 0;
+
+  background-color: rgb(10, 15, 23);
+
+  color: white;
+}
+
+/* =========================
+   DOCTOR HEADER
+========================= */
+
+.doctor-header {
+  width: 100%;
+  height: 75px;
+  min-height: 75px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 32px;
+
+  background-color: rgb(10, 15, 23);
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+/* =========================
+   HEADER LEFT
+========================= */
+
+.doctor-header-left {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 6px;
+}
+
+.doctor-breadcrumb {
+  margin: 0;
+
+  color: rgb(105, 128, 160);
+
+  font-size: 12px;
+}
+
+.doctor-breadcrumb span {
+  margin: 0 6px;
+
+  color: rgb(75, 95, 120);
+}
+
+.doctor-breadcrumb strong {
+  color: rgb(81, 226, 195);
+
+  font-weight: 500;
+}
+
+.doctor-header-left h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* =========================
+   HEADER RIGHT
+========================= */
+
+.doctor-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.doctor-notification {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgb(130, 151, 184);
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.doctor-notification:hover {
+  color: white;
+}
+
+/* =========================
+   DOCTOR AVATAR
+========================= */
+
+.doctor-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: rgba(26, 184, 149, 0.16);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   DASHBOARD CONTENT AREA
+========================= */
+
+.doctor-main-content {
+  padding: 32px;
+}
+
+/* =========================
+   DOCTOR PROFILE
+========================= */
+
+.doctor-profile-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 30px;
+}
+
+.doctor-profile-card {
+  width: 100%;
+  max-width: 900px;
+  min-height: 520px;
+
+  overflow: hidden;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 16px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+/* TOP */
+
+.doctor-profile-top {
+  min-height: 190px;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 50px 32px;
+
+  background-color: rgb(11, 47, 48);
+}
+
+.doctor-profile-avatar {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  background-color: rgb(14, 62, 74);
+  color: rgb(81, 226, 195);
+
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.doctor-profile-top h2 {
+  margin: 0 0 8px;
+
+  color: white;
+
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.doctor-profile-top p {
+  margin: 0;
+
+  color: rgb(81, 226, 195);
+
+  font-size: 16px;
+}
+
+/* INFORMATION */
+
+.doctor-profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  padding: 45px 32px 50px;
+}
+
+.doctor-profile-info-box {
+  min-height: 115px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 22px 20px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 12px;
+
+  background-color: rgb(10, 15, 23);
+}
+
+.doctor-profile-info-label {
+  color: rgb(100, 120, 150);
+  font-size: 13px;
+}
+
+.doctor-profile-info-value {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .doctor-profile-section {
+    padding: 20px;
+  }
+
+  .doctor-profile-card {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .doctor-profile-top {
+    min-height: 160px;
+    padding: 30px;
+  }
+
+  .doctor-profile-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 19px;
+  }
+
+  .doctor-profile-top h2 {
+    font-size: 22px;
+  }
+
+  .doctor-profile-info-grid {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .doctor-profile-info-box {
+    min-height: 100px;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+  .doctor-profile-section {
+    padding-top: 15px;
+  }
+
+  .doctor-profile-card {
+    max-width: 100%;
+  }
+
+  .doctor-profile-top {
+    padding: 25px;
+  }
+
+  .doctor-profile-info-grid {
+    grid-template-columns: 1fr;
+
+    padding: 22px 25px 25px;
+  }
+}
+
+/* =========================
+   DOCTOR PATIENTS
+========================= */
+
+.doctor-patients-section {
+  width: 92%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.patients-toolbar {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+.patients-search {
+  flex: 1;
+
+  height: 44px;
+
+  padding: 0 16px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 10px;
+
+  outline: none;
+
+  background-color: rgb(18, 26, 42);
+
+  color: white;
+
+  font-size: 14px;
+}
+
+.patients-search::placeholder {
+  color: rgb(85, 105, 135);
+}
+
+.patients-search:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+.add-patient-button {
+  height: 44px;
+
+  padding: 0 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.add-patient-button:hover {
+  background-color: rgb(31, 204, 166);
+}
+
+/* =========================
+   PATIENTS CARD
+========================= */
+
+.patients-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.patients-card-header {
+  padding: 20px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.patients-card-header h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.patients-card-header h2 span {
+  color: rgb(100, 120, 150);
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+.patient-record-button {
+  width: auto !important;
+
+  padding: 0 12px;
+
+  border: 1px solid rgb(26, 184, 149);
+  border-radius: 8px;
+
+  background-color: rgba(26, 184, 149, 0.12);
+  color: rgb(81, 226, 195);
+
+  font-size: 11px !important;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.patient-record-button:hover {
+  background-color: rgba(26, 184, 149, 0.25);
+}
+.patients-table-header {
+  display: grid;
+
+  grid-template-columns: 2fr 0.5fr 1fr 1fr 1.2fr 1.4fr;
+
+  align-items: center;
+
+  padding: 14px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+
+  color: rgb(90, 110, 140);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+}
+
+/* =========================
+   PATIENT ROW
+========================= */
+
+.patient-row {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 1fr 1fr 1.2fr 1.4fr;
+
+  align-items: center;
+
+  min-height: 72px;
+
+  padding: 12px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+
+  transition: 0.2s;
+}
+
+.patient-row:last-child {
+  border-bottom: none;
+}
+
+.patient-row:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* =========================
+   PATIENT NAME
+========================= */
+
+.patient-main {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.patient-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background-color: rgba(26, 184, 149, 0.15);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.patient-main h3 {
+  margin: 0 0 4px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.patient-main p {
+  margin: 0;
+
+  color: rgb(80, 100, 130);
+
+  font-size: 11px;
+}
+
+/* =========================
+   TABLE VALUES
+========================= */
+
+.patient-cell {
+  color: rgb(150, 170, 200);
+
+  font-size: 13px;
+}
+
+.patient-next {
+  color: rgb(81, 226, 195);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================
+   PATIENT ACTIONS
+========================= */
+
+.patient-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.patient-actions button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* Edit Button */
+
+.patient-edit-button {
+  border: 1px solid rgb(50, 80, 105);
+
+  background-color: rgb(20, 42, 55);
+
+  color: rgb(81, 226, 195);
+}
+
+.patient-edit-button:hover {
+  background-color: rgb(25, 55, 70);
+}
+
+/* Delete Button */
+
+.patient-delete-button {
+  border: 1px solid rgb(120, 45, 50);
+
+  background-color: rgba(220, 50, 60, 0.15);
+
+  color: rgb(255, 80, 90);
+}
+
+.patient-delete-button:hover {
+  background-color: rgba(220, 50, 60, 0.3);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .doctor-patients-section {
+    width: 96%;
+  }
+
+  .patients-card {
+    overflow-x: auto;
+  }
+
+  .patients-table-header,
+  .patient-row {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 700px) {
+  .doctor-patients-section {
+    width: 100%;
+  }
+
+  .patients-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-patient-button {
+    width: 100%;
+  }
+
+  .patients-search {
+    width: 100%;
+  }
+}
+
+/* =========================
+   DOCTOR SCHEDULE
+========================= */
+
+.doctor-schedule-section {
+  width: 92%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.schedule-toolbar {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 160px 130px;
+
+  gap: 12px;
+
+  margin-bottom: 14px;
+}
+
+.schedule-search,
+.schedule-date,
+.schedule-select {
+  height: 44px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 10px;
+
+  outline: none;
+
+  background-color: rgb(10, 15, 23);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.schedule-search {
+  padding: 0 16px;
+}
+
+.schedule-date,
+.schedule-select {
+  padding: 0 12px;
+}
+
+.schedule-search::placeholder {
+  color: rgb(85, 105, 135);
+}
+
+.schedule-search:focus,
+.schedule-date:focus,
+.schedule-select:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.schedule-filters {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+}
+
+.schedule-filter {
+  padding: 8px 14px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 20px;
+
+  background-color: rgb(18, 26, 42);
+
+  color: rgb(130, 151, 184);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.schedule-filter:hover {
+  color: white;
+
+  border-color: rgb(26, 184, 149);
+}
+
+.schedule-filter.active {
+  border-color: rgb(26, 184, 149);
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+}
+
+/* =========================
+   APPOINTMENTS CARD
+========================= */
+
+.appointments-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.appointments-card-header {
+  padding: 20px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.appointments-card-header h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.appointments-card-header h2 span {
+  color: rgb(100, 120, 150);
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.appointments-table-header {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr
+    1.6fr
+    1.7fr
+    1fr
+    0.8fr;
+
+  align-items: center;
+
+  padding: 14px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+
+  color: rgb(90, 110, 140);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+}
+
+/* =========================
+   APPOINTMENT ROW
+========================= */
+
+.appointment-row {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr
+    1.6fr
+    1.7fr
+    1fr
+    0.8fr;
+
+  align-items: center;
+
+  min-height: 72px;
+
+  padding: 12px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+
+  transition: 0.2s;
+}
+
+.appointment-row:last-child {
+  border-bottom: none;
+}
+
+.appointment-row:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* =========================
+   TIME
+========================= */
+
+.appointment-time {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.appointment-time strong {
+  color: white;
+
+  font-size: 14px;
+}
+
+.appointment-time span {
+  color: rgb(80, 100, 130);
+
+  font-size: 11px;
+}
+
+/* =========================
+   PATIENT
+========================= */
+
+.appointment-patient {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.appointment-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background-color: rgba(26, 184, 149, 0.15);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.appointment-patient h3 {
+  margin: 0 0 4px;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.appointment-patient p {
+  margin: 0;
+
+  color: rgb(80, 100, 130);
+
+  font-size: 11px;
+}
+
+/* =========================
+   REASON
+========================= */
+
+.appointment-reason {
+  color: rgb(130, 151, 184);
+
+  font-size: 13px;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.appointment-status {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.appointment-status.scheduled {
+  background-color: rgba(55, 130, 255, 0.15);
+
+  color: rgb(75, 150, 255);
+}
+
+.appointment-status.checked-in {
+  background-color: rgba(255, 180, 0, 0.15);
+
+  color: rgb(255, 190, 20);
+}
+
+.appointment-status.completed {
+  background-color: rgba(26, 184, 149, 0.15);
+
+  color: rgb(81, 226, 195);
+}
+
+.appointment-status.cancelled {
+  background-color: rgba(220, 50, 60, 0.15);
+
+  color: rgb(255, 80, 90);
+}
+
+/* =========================
+   ACTIONS
+========================= */
+.appointment-record-button {
+  width: auto !important;
+  padding: 0 12px;
+
+  border: 1px solid rgb(26, 184, 149);
+  border-radius: 8px;
+
+  background-color: rgba(26, 184, 149, 0.12);
+  color: rgb(81, 226, 195);
+
+  font-size: 11px !important;
+  font-weight: 600;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.appointment-record-button:hover {
+  background-color: rgba(26, 184, 149, 0.25);
+}
+.appointment-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.appointment-actions button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* Edit */
+
+.appointment-edit-button {
+  border: 1px solid rgb(50, 80, 105);
+
+  background-color: rgb(20, 42, 55);
+
+  color: rgb(81, 226, 195);
+}
+
+.appointment-edit-button:hover {
+  background-color: rgb(25, 55, 70);
+}
+
+/* Delete */
+
+.appointment-delete-button {
+  border: 1px solid rgb(120, 45, 50);
+
+  background-color: rgba(220, 50, 60, 0.15);
+
+  color: rgb(255, 80, 90);
+}
+
+.appointment-delete-button:hover {
+  background-color: rgba(220, 50, 60, 0.3);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .doctor-schedule-section {
+    width: 96%;
+  }
+
+  .appointments-card {
+    overflow-x: auto;
+  }
+
+  .appointments-table-header,
+  .appointment-row {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 700px) {
+  .doctor-schedule-section {
+    width: 100%;
+  }
+
+  .schedule-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-filters {
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+  }
+
+  .schedule-filter {
+    flex-shrink: 0;
+  }
+}
+
+.doctor-home {
+  width: 92%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.next-patient-card {
+  overflow: hidden;
+
+  border: 1px solid rgb(20, 105, 100);
+  border-radius: 16px;
+
+  background-color: rgb(10, 48, 49);
+
+  margin-bottom: 28px;
+}
+
+.next-patient-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 35px;
+}
+
+.next-patient-label {
+  margin: 0 0 10px;
+
+  color: rgb(81, 226, 195);
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.next-patient-top h2 {
+  margin: 0 0 10px;
+
+  color: white;
+
+  font-size: 30px;
+}
+
+.next-patient-details {
+  display: flex;
+  gap: 14px;
+
+  color: rgb(145, 175, 200);
+
+  font-size: 14px;
+}
+
+.patient-status {
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.patient-status.checked-in {
+  background-color: rgba(255, 180, 0, 0.15);
+  color: rgb(255, 190, 20);
+}
+
+.visit-reason-box {
+  margin: 0 35px;
+
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  border: 1px solid rgb(45, 80, 85);
+  border-radius: 12px;
+
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.visit-reason-box span {
+  color: rgb(105, 135, 160);
+
+  font-size: 11px;
+}
+
+.visit-reason-box strong {
+  color: white;
+
+  font-size: 15px;
+}
+
+.next-patient-buttons {
+  display: flex;
+  gap: 14px;
+
+  padding: 24px 35px 30px;
+}
+
+.open-record-button,
+.start-consultation-button {
+  padding: 13px 22px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.open-record-button {
+  border: none;
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+}
+
+.start-consultation-button {
+  border: 1px solid rgb(50, 75, 80);
+
+  background-color: rgba(255, 255, 255, 0.06);
+
+  color: rgb(155, 185, 205);
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgb(25, 90, 85);
+}
+
+.dashboard-stats div {
+  min-height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  border-right: 1px solid rgb(25, 90, 85);
+}
+
+.dashboard-stats div:last-child {
+  border-right: none;
+}
+
+.dashboard-stats strong {
+  color: white;
+
+  font-size: 23px;
+}
+
+.dashboard-stats span {
+  color: rgb(100, 135, 165);
+
+  font-size: 11px;
+}
+
+/* LOWER GRID */
+
+.doctor-home-grid {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 25px;
+}
+
+/* CARDS */
+
+.today-schedule-card,
+.recent-records-card,
+.your-patients-card {
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.dashboard-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.dashboard-card-heading h2,
+.recent-records-card h2,
+.your-patients-card h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 15px;
+}
+
+.dashboard-card-heading p {
+  margin: 5px 0 0;
+
+  color: rgb(90, 110, 140);
+
+  font-size: 11px;
+}
+
+.dashboard-text-button {
+  border: none;
+  background: none;
+
+  color: rgb(81, 226, 195);
+
+  cursor: pointer;
+}
+
+/* SCHEDULE */
+
+.today-schedule-list {
+  padding: 14px 20px 22px;
+}
+
+.today-schedule-row {
+  display: grid;
+
+  grid-template-columns: 65px 40px 1fr auto;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 10px;
+
+  border-radius: 10px;
+}
+
+.today-schedule-row:first-child {
+  background-color: rgba(26, 184, 149, 0.08);
+  border: 1px solid rgba(26, 184, 149, 0.3);
+}
+
+.today-time {
+  color: rgb(150, 175, 205);
+
+  font-size: 12px;
+}
+
+.today-patient-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+
+  background-color: rgba(26, 184, 149, 0.15);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 11px;
+}
+
+.today-patient-info h3 {
+  margin: 0 0 4px;
+
+  color: white;
+
+  font-size: 13px;
+}
+
+.today-patient-info p {
+  margin: 0;
+
+  color: rgb(80, 100, 130);
+
+  font-size: 11px;
+}
+
+.dashboard-status {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+}
+
+.dashboard-status.checked-in {
+  background-color: rgba(255, 180, 0, 0.15);
+  color: rgb(255, 190, 20);
+}
+
+.dashboard-status.completed {
+  background-color: rgba(26, 184, 149, 0.15);
+  color: rgb(81, 226, 195);
+}
+
+.dashboard-status.scheduled {
+  background-color: rgba(55, 130, 255, 0.15);
+  color: rgb(75, 150, 255);
+}
+
+/* RIGHT SIDE */
+
+.dashboard-side-panel {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.recent-records-card h2,
+.your-patients-card h2 {
+  padding: 20px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.record-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.record-row:last-child {
+  border-bottom: none;
+}
+
+.record-row h3 {
+  margin: 0 0 5px;
+
+  color: white;
+
+  font-size: 13px;
+}
+
+.record-row p {
+  margin: 0;
+
+  color: rgb(81, 226, 195);
+
+  font-size: 11px;
+}
+
+.record-row > span {
+  color: rgb(80, 100, 130);
+
+  font-size: 11px;
+}
+
+.dashboard-patient-row {
+  display: grid;
+
+  grid-template-columns: 40px 1fr auto;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 20px;
+}
+
+.dashboard-patient-row h3 {
+  margin: 0 0 4px;
+
+  color: white;
+
+  font-size: 13px;
+}
+
+.dashboard-patient-row p {
+  margin: 0;
+
+  color: rgb(80, 100, 130);
+
+  font-size: 11px;
+}
+
+.dashboard-patient-row > span:last-child {
+  color: rgb(80, 100, 130);
+}
+
+.view-all-patients-button {
+  width: calc(100% - 40px);
+
+  margin: 10px 20px 20px;
+
+  padding: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: rgba(26, 184, 149, 0.08);
+
+  color: rgb(81, 226, 195);
+
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .doctor-home {
+    width: 96%;
+  }
+
+  .doctor-home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .doctor-home {
+    width: 100%;
+  }
+
+  .next-patient-top {
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 25px;
+  }
+
+  .visit-reason-box {
+    margin: 0 25px;
+  }
+
+  .next-patient-buttons {
+    flex-direction: column;
+
+    padding: 20px 25px 25px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-stats div {
+    border-right: none;
+    border-bottom: 1px solid rgb(25, 90, 85);
+  }
+
+  .dashboard-stats div:last-child {
+    border-bottom: none;
+  }
+
+  .today-schedule-row {
+    grid-template-columns: 55px 35px 1fr;
+  }
+
+  .dashboard-status {
+    grid-column: 3;
+  }
+}
+.doctor-record-page {
+  width: 92%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 25px 0 40px;
+}
+
+/* BACK */
+
+.record-back-button {
+  margin-bottom: 18px;
+
+  border: none;
+  background: none;
+
+  color: rgb(110, 135, 165);
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.record-back-button:hover {
+  color: rgb(81, 226, 195);
+}
+
+/* TOP PROFILE CARD */
+
+.record-profile-card {
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+
+  padding: 30px;
+
+  margin-bottom: 22px;
+}
+
+.record-profile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.record-patient-main {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.record-avatar {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+
+  background-color: rgb(14, 62, 74);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.record-patient-main h2 {
+  margin: 0 0 5px;
+
+  color: white;
+
+  font-size: 20px;
+}
+
+.record-patient-main p {
+  margin: 0;
+
+  color: rgb(100, 125, 155);
+
+  font-size: 12px;
+}
+
+.record-add-button {
+  padding: 11px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* CONTACT INFO */
+
+.record-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+.record-info-box {
+  min-height: 65px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 12px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 10px;
+
+  background-color: rgb(10, 15, 23);
+}
+
+.record-info-box span {
+  color: rgb(90, 115, 145);
+
+  font-size: 10px;
+}
+
+.record-info-box strong {
+  color: white;
+
+  font-size: 12px;
+}
+
+/* ALLERGY ALERT */
+
+.record-allergy-alert {
+  padding: 12px 14px;
+
+  border: 1px solid rgb(105, 80, 30);
+  border-radius: 9px;
+
+  background-color: rgba(255, 180, 0, 0.06);
+
+  color: rgb(255, 190, 20);
+
+  font-size: 12px;
+
+  margin-bottom: 16px;
+}
+
+/* TABS */
+
+.record-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.record-tab {
+  padding: 9px 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: none;
+
+  color: rgb(95, 120, 155);
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.record-tab.active {
+  background-color: rgb(26, 184, 149);
+  color: white;
+}
+
+/* BOTTOM */
+
+.record-bottom-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  gap: 18px;
+}
+
+/* PATIENT DETAILS */
+
+.record-details-card {
+  padding: 22px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.record-details-card h3 {
+  margin: 0 0 18px;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+.record-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.record-detail-box {
+  min-height: 64px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 12px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 9px;
+
+  background-color: rgb(10, 15, 23);
+}
+
+.record-detail-box span {
+  color: rgb(90, 115, 145);
+
+  font-size: 10px;
+}
+
+.record-detail-box strong {
+  color: white;
+
+  font-size: 12px;
+}
+
+/* RIGHT SIDE */
+
+.record-side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.record-next-card,
+.record-allergies-card {
+  padding: 20px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.record-next-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.record-next-card span {
+  color: rgb(90, 115, 145);
+
+  font-size: 10px;
+}
+
+.record-next-card strong {
+  color: rgb(81, 226, 195);
+
+  font-size: 17px;
+}
+
+.record-next-card p {
+  margin: 0;
+
+  color: rgb(90, 115, 145);
+
+  font-size: 11px;
+}
+
+.record-allergies-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.record-allergies-card span {
+  color: rgb(255, 190, 20);
+
+  font-size: 11px;
+}
+
+.record-allergies-card strong {
+  color: white;
+
+  font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .doctor-record-page {
+    width: 96%;
+  }
+
+  .record-contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .record-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .record-profile-card {
+    padding: 20px;
+  }
+
+  .record-profile-top {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+  .record-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .record-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .record-tabs {
+    overflow-x: auto;
+  }
+} /* ========================================
+   PATIENT RECORD TABS
+======================================== */
+
+.record-tab {
+  padding: 9px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: rgb(100, 125, 160);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.record-tab:hover {
+  color: rgb(81, 226, 195);
+}
+
+.record-tab.active {
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+}
+
+/* ========================================
+   PATIENT APPOINTMENTS
+======================================== */
+
+.patient-record-appointments {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.patient-record-appointment {
+  width: 100%;
+  min-height: 82px;
+
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 16px 24px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.patient-record-time {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+
+  background-color: rgba(26, 184, 149, 0.12);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.patient-record-appointment-info h3 {
+  margin: 0 0 6px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.patient-record-appointment-info p {
+  margin: 0;
+
+  color: rgb(85, 105, 135);
+
+  font-size: 11px;
+}
+
+/* APPOINTMENT STATUS */
+
+.patient-record-status {
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.patient-record-status.completed {
+  background-color: rgba(26, 184, 149, 0.12);
+
+  color: rgb(81, 226, 195);
+}
+
+.patient-record-status.scheduled {
+  background-color: rgba(55, 130, 255, 0.15);
+
+  color: rgb(75, 150, 255);
+}
+
+/* ========================================
+   MEDICAL HISTORY
+======================================== */
+
+.record-history-card {
+  width: 100%;
+
+  padding: 22px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.record-history-card > h3 {
+  margin: 0 0 20px;
+
+  color: white;
+
+  font-size: 15px;
+}
+
+.medical-history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.medical-history-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 5px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.medical-history-row:last-child {
+  border-bottom: none;
+}
+
+.medical-history-row h4 {
+  margin: 0 0 5px;
+
+  color: white;
+
+  font-size: 13px;
+}
+
+.medical-history-row p {
+  margin: 0;
+
+  color: rgb(81, 226, 195);
+
+  font-size: 11px;
+}
+
+.medical-history-row > span {
+  color: rgb(90, 110, 140);
+
+  font-size: 11px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+  .patient-record-appointment {
+    grid-template-columns: 48px 1fr;
+
+    padding: 14px;
+  }
+
+  .patient-record-status {
+    grid-column: 2;
+    width: fit-content;
+  }
+
+  .record-tabs {
+    overflow-x: auto;
+  }
+
+  .record-tab {
+    flex-shrink: 0;
+  }
+
+  .medical-history-row {
+    gap: 15px;
+  }
+}
+/* ========================================
+   MEDICAL HISTORY
+======================================== */
+
+.medical-history-section {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* ========================================
+   NEW MEDICAL RECORD FORM
+======================================== */
+
+.new-medical-record-card {
+  width: 100%;
+
+  padding: 22px;
+
+  border: 1px solid rgb(25, 100, 105);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.new-medical-record-card > h3 {
+  margin: 0 0 20px;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.new-record-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 15px;
+}
+
+.new-record-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.new-record-field label {
+  color: rgb(100, 125, 155);
+
+  font-size: 11px;
+}
+
+.new-record-field input,
+.new-record-field textarea {
+  width: 100%;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 10px;
+
+  outline: none;
+
+  background-color: rgb(10, 15, 23);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.new-record-field input {
+  height: 42px;
+
+  padding: 0 14px;
+}
+
+.new-record-field textarea {
+  min-height: 95px;
+
+  padding: 14px;
+
+  resize: vertical;
+}
+
+.new-record-field input::placeholder,
+.new-record-field textarea::placeholder {
+  color: rgb(65, 90, 120);
+}
+
+.new-record-field input:focus,
+.new-record-field textarea:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+
+/* BUTTONS */
+
+.new-record-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.new-record-buttons button {
+  height: 42px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.new-record-cancel {
+  border: 1px solid rgb(40, 50, 65);
+
+  background-color: transparent;
+
+  color: rgb(100, 125, 160);
+}
+
+.new-record-cancel:hover {
+  color: white;
+
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.new-record-save {
+  border: none;
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+}
+
+.new-record-save:hover {
+  background-color: rgb(31, 204, 166);
+}
+
+
+/* ========================================
+   EXISTING MEDICAL RECORD CARD
+======================================== */
+
+.medical-record-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+.medical-record-header {
+  min-height: 65px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 20px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.medical-record-header h3 {
+  margin: 0 0 5px;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+.medical-record-header p {
+  margin: 0;
+
+  color: rgb(85, 105, 135);
+
+  font-size: 10px;
+}
+
+.medical-record-edit {
+  border: none;
+
+  background: none;
+
+  color: rgb(100, 125, 160);
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.medical-record-edit:hover {
+  color: rgb(81, 226, 195);
+}
+
+
+/* RECORD CONTENT */
+
+.medical-record-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  padding: 20px;
+}
+
+.medical-record-treatment,
+.medical-record-notes {
+  min-height: 72px;
+
+  padding: 15px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 10px;
+
+  background-color: rgb(10, 15, 23);
+}
+
+.medical-record-notes {
+  background-color: rgba(30, 70, 120, 0.1);
+
+  border-color: rgb(35, 65, 100);
+}
+
+.medical-record-treatment span,
+.medical-record-notes span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: rgb(85, 120, 160);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.medical-record-notes span {
+  color: rgb(75, 150, 255);
+}
+
+.medical-record-treatment p,
+.medical-record-notes p {
+  margin: 0;
+
+  color: white;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .new-record-top {
+    grid-template-columns: 1fr;
+  }
+
+  .new-record-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .medical-record-content {
+    grid-template-columns: 1fr;
   }
 }
