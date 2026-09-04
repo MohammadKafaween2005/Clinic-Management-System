@@ -1,8 +1,8 @@
-import Introduction from "../components/Introduction";
-import Services from "../components/Services";
-import About from "../components/About";
-import Contact from "../components/Contact";
-import ClinicLocation from "../components/ClinicLocation";
+import Introduction from "../components/sharedcomponents/Introduction";
+import Services from "../components/sharedcomponents/Services";
+import About from "../components/sharedcomponents/About";
+import Contact from "../components/sharedcomponents/Contact";
+import ClinicLocation from "../components/sharedcomponents/ClinicLocation";
 
 export default function Home() {
   return (

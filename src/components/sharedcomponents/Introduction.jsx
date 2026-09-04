@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import DoctorImage from "../assets/IMG1.png"
+import DoctorImage from "../../assets/IMG1.png"
 export default function Introduction() {
   return (
     <div className="intro">

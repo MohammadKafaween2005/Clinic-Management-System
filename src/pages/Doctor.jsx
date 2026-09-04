@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
-import { DoctorContext, DoctorProvider } from "../context/DoctorContext";
-
+import { DoctorContext } from "../context/DoctorContext";
+import DoctorProvider from "../context/DoctorProvider";
 import DoctorSidebar from "../components/doctorcomponents/DoctorSidebar";
 import DoctorHeader from "../components/doctorcomponents/DoctorHeader";
 import DoctorProfile from "../components/doctorcomponents/DoctorProfile";
