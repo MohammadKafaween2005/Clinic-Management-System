@@ -7,10 +7,16 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+
+# Build output
 dist
 dist-ssr
+
+# Local files
 *.local
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -21,3 +27,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Patient frontend - temporary ignore
+src/pages/Patient.jsx
+src/components/patientcomponents/
+src/context/PatientContext.jsx
+src/context/PatientProvider.jsx

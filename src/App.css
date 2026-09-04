@@ -1794,6 +1794,10 @@ html {
   }
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
   width: 100%;
 
@@ -1879,14 +1883,6 @@ html {
   cursor: pointer;
 }
 
-/* =========================
-   DOCTOR PAGE
-========================= */
-
-.doctor-page {
-  min-height: 100vh;
-  background-color: rgb(10, 15, 23);
-}
 /* =========================
    DOCTOR PAGE
 ========================= */
@@ -3816,26 +3812,6 @@ html {
   gap: 10px;
 }
 
-.record-tab {
-  padding: 9px 15px;
-
-  border: none;
-  border-radius: 8px;
-
-  background: none;
-
-  color: rgb(95, 120, 155);
-
-  font-size: 12px;
-
-  cursor: pointer;
-}
-
-.record-tab.active {
-  background-color: rgb(26, 184, 149);
-  color: white;
-}
-
 /* BOTTOM */
 
 .record-bottom-grid {
@@ -4001,7 +3977,9 @@ html {
   .record-tabs {
     overflow-x: auto;
   }
-} /* ========================================
+}
+
+/* ========================================
    PATIENT RECORD TABS
 ======================================== */
 
@@ -4227,7 +4205,6 @@ html {
   gap: 16px;
 }
 
-
 /* ========================================
    NEW MEDICAL RECORD FORM
 ======================================== */
@@ -4317,7 +4294,6 @@ html {
   border-color: rgb(26, 184, 149);
 }
 
-
 /* BUTTONS */
 
 .new-record-buttons {
@@ -4368,7 +4344,6 @@ html {
 .new-record-save:hover {
   background-color: rgb(31, 204, 166);
 }
-
 
 /* ========================================
    EXISTING MEDICAL RECORD CARD
@@ -4429,7 +4404,6 @@ html {
   color: rgb(81, 226, 195);
 }
 
-
 /* RECORD CONTENT */
 
 .medical-record-content {
@@ -4486,11 +4460,9 @@ html {
   line-height: 1.5;
 }
 
-
 /* RESPONSIVE */
 
 @media (max-width: 700px) {
-
   .new-record-top {
     grid-template-columns: 1fr;
   }
@@ -4502,4 +4474,3148 @@ html {
   .medical-record-content {
     grid-template-columns: 1fr;
   }
+}
+/* =========================
+   RECEPTIONIST PAGE
+========================= */
+
+.receptionist-page {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(10, 15, 23);
+  color: white;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.receptionist-sidebar {
+  width: 240px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgb(9, 14, 22);
+
+  border-right: 1px solid rgb(40, 50, 65);
+
+  z-index: 1000;
+}
+
+/* =========================
+   SIDEBAR BRAND
+========================= */
+
+.receptionist-brand {
+  height: 75px;
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 18px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.receptionist-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: rgb(26, 184, 149);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.receptionist-clinic-name {
+  flex: 1;
+
+  overflow: hidden;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sidebar-collapse {
+  color: rgb(85, 110, 145);
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+
+.receptionist-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 24px 12px;
+}
+
+.receptionist-nav-item {
+  width: 100%;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: rgb(100, 125, 160);
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.receptionist-nav-item:hover {
+  background: rgba(26, 184, 149, 0.08);
+
+  color: rgb(81, 226, 195);
+}
+
+.receptionist-nav-item.active {
+  background: rgba(26, 184, 149, 0.14);
+
+  color: rgb(81, 226, 195);
+}
+
+.receptionist-nav-icon {
+  width: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  font-size: 15px;
+}
+
+/* =========================
+   SIDEBAR BOTTOM USER
+========================= */
+
+.receptionist-user {
+  margin-top: auto;
+
+  min-height: 130px;
+
+  padding: 24px 20px;
+
+  border-top: 1px solid rgb(40, 50, 65);
+}
+
+.receptionist-user-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-bottom: 22px;
+}
+
+.receptionist-user-info strong {
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.receptionist-user-info span {
+  color: rgb(81, 226, 195);
+
+  font-size: 12px;
+}
+
+.receptionist-logout {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgb(100, 125, 160);
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.receptionist-logout:hover {
+  color: rgb(81, 226, 195);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.receptionist-content {
+  min-height: 100vh;
+
+  margin-left: 240px;
+  padding: 0;
+
+  background: rgb(10, 15, 23);
+
+  color: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.receptionist-header {
+  width: 100%;
+  height: 75px;
+  min-height: 75px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 32px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+
+  background: rgb(10, 15, 23);
+}
+
+/* =========================
+   HEADER LEFT
+========================= */
+
+.receptionist-header-left {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.receptionist-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 11px;
+}
+
+.receptionist-breadcrumb span {
+  color: rgb(80, 105, 140);
+}
+
+.receptionist-breadcrumb strong {
+  color: rgb(81, 226, 195);
+
+  font-weight: 500;
+}
+
+.receptionist-header-left h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================
+   HEADER RIGHT
+========================= */
+
+.receptionist-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.receptionist-notification-button {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgb(100, 125, 160);
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.receptionist-notification-button:hover {
+  color: rgb(81, 226, 195);
+}
+
+.notification-dot {
+  width: 5px;
+  height: 5px;
+
+  position: absolute;
+
+  top: 2px;
+  right: 2px;
+
+  border-radius: 50%;
+
+  background: rgb(26, 184, 149);
+}
+
+.receptionist-header-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: rgb(8, 50, 52);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================
+   RECEPTIONIST HOME
+========================= */
+
+.receptionist-home {
+  width: 100%;
+  padding: 30px 32px 50px;
+}
+
+/* TOP */
+
+.receptionist-home-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.receptionist-date {
+  margin: 0 0 7px;
+
+  color: rgb(85, 110, 145);
+
+  font-size: 12px;
+}
+
+.receptionist-home-top h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.receptionist-home-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.new-appointment-button,
+.register-patient-button {
+  height: 40px;
+
+  padding: 0 18px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.new-appointment-button {
+  border: none;
+
+  background: rgb(26, 184, 149);
+
+  color: white;
+}
+
+.register-patient-button {
+  border: 1px solid rgb(40, 50, 65);
+
+  background: rgb(18, 26, 42);
+
+  color: rgb(120, 145, 180);
+}
+
+/* SUMMARY */
+
+.appointment-summary {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.summary-chip {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 14px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 9px;
+
+  background: rgb(18, 26, 42);
+}
+
+.summary-chip span {
+  font-size: 10px;
+}
+
+.summary-chip strong {
+  color: white;
+
+  font-size: 12px;
+}
+
+.summary-chip p {
+  margin: 0;
+
+  color: rgb(95, 120, 155);
+
+  font-size: 11px;
+}
+
+.summary-chip.waiting span {
+  color: rgb(255, 185, 20);
+}
+
+.summary-chip.completed span {
+  color: rgb(26, 184, 149);
+}
+
+.summary-chip.cancelled span {
+  color: rgb(255, 75, 90);
+}
+
+.summary-chip.remaining span {
+  color: rgb(65, 125, 255);
+}
+
+/* APPOINTMENT CARD */
+
+.receptionist-home-card {
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+.schedule-card-top {
+  min-height: 58px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.patient-search-box {
+  width: 290px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 12px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 9px;
+
+  background: rgb(10, 15, 23);
+}
+
+.patient-search-box span {
+  color: rgb(80, 105, 140);
+}
+
+.patient-search-box input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.patient-search-box input::placeholder {
+  color: rgb(75, 100, 135);
+}
+
+/* APPOINTMENT ROWS */
+.receptionist-home-appointment {
+  min-height: 68px;
+
+  display: grid;
+
+  grid-template-columns:
+    90px
+    42px
+    minmax(200px, 1fr)
+    140px
+    230px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 24px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.receptionist-home-appointment:last-child {
+  border-bottom: none;
+}
+
+.home-appointment-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.home-appointment-time strong {
+  color: white;
+  font-size: 14px;
+}
+
+.home-appointment-time span {
+  color: rgb(75, 100, 135);
+  font-size: 11px;
+}
+
+.home-appointment-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 9px;
+
+  background: rgb(10, 55, 62);
+  color: rgb(81, 226, 195);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.home-appointment-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.home-appointment-info strong {
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.home-appointment-info span {
+  color: rgb(75, 100, 135);
+
+  font-size: 12px;
+}
+
+.home-appointment-status-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.home-appointment-status {
+  width: fit-content;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.home-appointment-status.checked {
+  background: rgba(255, 185, 20, 0.13);
+  color: rgb(255, 185, 20);
+}
+
+.home-appointment-status.completed {
+  background: rgba(26, 184, 149, 0.13);
+  color: rgb(81, 226, 195);
+}
+
+.home-appointment-status.scheduled {
+  background: rgba(65, 125, 255, 0.14);
+  color: rgb(80, 145, 255);
+}
+
+.home-appointment-status.cancelled {
+  background: rgba(255, 75, 90, 0.13);
+  color: rgb(255, 85, 100);
+}
+
+.home-appointment-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.home-appointment-actions button {
+  height: 31px;
+
+  padding: 0 11px;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.home-cancel-button {
+  border: 1px solid rgb(90, 50, 60);
+
+  color: rgb(235, 95, 105);
+}
+
+.home-cancel-button:hover {
+  background: rgba(255, 75, 90, 0.1);
+}
+
+.home-checkin-button {
+  border: 1px solid rgb(25, 105, 90);
+
+  color: rgb(81, 226, 195);
+}
+
+.home-checkin-button:hover {
+  background: rgba(26, 184, 149, 0.1);
+}
+
+.home-view-button {
+  border: 1px solid rgb(50, 70, 100);
+
+  color: rgb(120, 150, 190);
+}
+
+.home-view-button:hover {
+  border-color: rgb(80, 110, 150);
+  color: white;
+}
+/* =========================
+   FULL SCHEDULE / ALL PATIENTS
+========================= */
+
+.home-link-button {
+  min-height: 34px;
+
+  padding: 0 14px;
+
+  border: 1px solid rgba(26, 184, 149, 0.35);
+  border-radius: 8px;
+
+  background: rgba(26, 184, 149, 0.08);
+
+  color: rgb(81, 226, 195);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.home-link-button:hover {
+  background: rgba(26, 184, 149, 0.15);
+
+  border-color: rgb(26, 184, 149);
+
+  text-decoration: none;
+}
+
+/* =========================
+   RECENT PATIENTS
+========================= */
+
+.recent-patients-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+/* HEADER */
+
+.recent-patients-header {
+  min-height: 64px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.recent-patients-header h3 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* PATIENT GRID */
+
+.recent-patients-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+
+  padding: 16px 20px;
+}
+
+/* EACH PATIENT */
+
+.recent-patient-item {
+  min-height: 62px;
+
+  display: grid;
+
+  grid-template-columns: 38px 1fr auto;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 14px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 10px;
+
+  background: rgb(15, 23, 37);
+}
+
+/* INITIALS */
+
+.recent-patient-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 9px;
+
+  background: rgb(10, 55, 62);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* PATIENT INFORMATION */
+
+.recent-patient-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.recent-patient-info strong {
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.recent-patient-info span {
+  color: rgb(85, 110, 145);
+
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* DATE */
+
+.recent-patient-date {
+  color: rgb(81, 226, 195);
+
+  font-size: 12px;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .recent-patients-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   NEW APPOINTMENT PAGE
+========================= */
+
+.new-appointment-page {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 30px 32px 50px;
+}
+
+.new-appointment-heading {
+  margin-bottom: 20px;
+}
+
+.new-appointment-heading h2 {
+  margin: 0 0 6px;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.new-appointment-heading p {
+  margin: 0;
+
+  color: rgb(90, 115, 150);
+
+  font-size: 13px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.new-appointment-layout {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+/* =========================
+   CALENDAR CARD
+========================= */
+
+.appointment-calendar-card,
+.appointment-times-card,
+.appointment-reason-card {
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+.appointment-calendar-card {
+  min-height: 420px;
+
+  padding: 22px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.calendar-header strong {
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.calendar-arrows {
+  display: flex;
+
+  gap: 8px;
+}
+
+.calendar-arrows button {
+  border: none;
+
+  background: transparent;
+
+  color: rgb(100, 125, 160);
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+.calendar-arrows button:hover {
+  color: rgb(81, 226, 195);
+}
+
+/* =========================
+   WEEK DAYS
+========================= */
+
+.calendar-weekdays {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  margin-bottom: 10px;
+}
+
+.calendar-weekdays span {
+  text-align: center;
+
+  color: rgb(75, 100, 135);
+
+  font-size: 11px;
+}
+
+/* =========================
+   CALENDAR DAYS
+========================= */
+
+.calendar-days {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 8px;
+}
+
+.calendar-day {
+  height: 40px;
+
+  border: 1px solid transparent;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: rgb(140, 165, 195);
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.calendar-day:hover:not(:disabled) {
+  border-color: rgb(26, 184, 149);
+
+  color: white;
+}
+
+.calendar-day:disabled {
+  cursor: default;
+}
+
+.calendar-day.selected {
+  border-color: rgb(26, 184, 149);
+
+  background: rgba(26, 184, 149, 0.12);
+
+  color: rgb(81, 226, 195);
+
+  font-weight: 600;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.appointment-booking-side {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+/* =========================
+   TIME CARD
+========================= */
+
+.appointment-times-card {
+  min-height: 180px;
+
+  padding: 20px;
+}
+
+.appointment-times-card h3,
+.appointment-reason-card h3 {
+  margin: 0 0 16px;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.no-date-message {
+  margin: 45px 0 0;
+
+  text-align: center;
+
+  color: rgb(65, 85, 115);
+
+  font-size: 12px;
+}
+
+.appointment-time-options {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+}
+
+.appointment-time-option {
+  height: 38px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 8px;
+
+  background: rgb(10, 15, 23);
+
+  color: rgb(120, 145, 180);
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.appointment-time-option:hover {
+  border-color: rgb(26, 184, 149);
+
+  color: white;
+}
+
+.appointment-time-option.active {
+  border-color: rgb(26, 184, 149);
+
+  background: rgba(26, 184, 149, 0.12);
+
+  color: rgb(81, 226, 195);
+}
+
+/* =========================
+   REASON CARD
+========================= */
+
+.appointment-reason-card {
+  padding: 20px;
+}
+
+.appointment-reason-card textarea {
+  width: 100%;
+  min-height: 115px;
+
+  padding: 14px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 10px;
+
+  outline: none;
+
+  resize: vertical;
+
+  background: rgb(10, 15, 23);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.appointment-reason-card textarea::placeholder {
+  color: rgb(65, 90, 120);
+}
+
+.appointment-reason-card textarea:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+/* =========================
+   CONFIRM BUTTON
+========================= */
+
+.appointment-confirm-button {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: rgb(26, 184, 149);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.appointment-confirm-button:hover:not(:disabled) {
+  background: rgb(31, 204, 166);
+}
+
+.appointment-confirm-button:disabled {
+  background: rgb(28, 39, 60);
+
+  color: rgb(70, 90, 120);
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .new-appointment-page {
+    max-width: none;
+
+    padding: 24px 20px;
+  }
+
+  .new-appointment-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   RECEPTIONIST APPOINTMENTS
+========================= */
+
+.receptionist-appointments-section {
+  width: 100%;
+  padding: 30px 32px 50px;
+}
+
+/* TOOLBAR */
+
+.receptionist-appointments-toolbar {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 150px 110px auto;
+
+  gap: 12px;
+
+  margin-bottom: 14px;
+}
+
+.receptionist-appointments-search,
+.receptionist-appointments-date,
+.receptionist-appointments-select {
+  height: 42px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 9px;
+
+  outline: none;
+
+  background: rgb(10, 15, 23);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.receptionist-appointments-search {
+  padding: 0 15px;
+}
+
+.receptionist-appointments-date,
+.receptionist-appointments-select {
+  padding: 0 12px;
+}
+
+.receptionist-appointments-search::placeholder {
+  color: rgb(80, 105, 140);
+}
+
+.receptionist-appointments-search:focus,
+.receptionist-appointments-date:focus,
+.receptionist-appointments-select:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+.receptionist-new-appointment-button {
+  height: 42px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: rgb(26, 184, 149);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* FILTERS */
+
+.receptionist-appointment-filters {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+}
+
+.receptionist-appointment-filter {
+  padding: 8px 14px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 20px;
+
+  background: rgb(18, 26, 42);
+
+  color: rgb(100, 125, 160);
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.receptionist-appointment-filter:hover {
+  color: white;
+  border-color: rgb(26, 184, 149);
+}
+
+.receptionist-appointment-filter.active {
+  border-color: rgb(26, 184, 149);
+
+  background: rgb(26, 184, 149);
+
+  color: white;
+}
+
+/* CARD */
+
+.receptionist-appointments-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+.receptionist-appointments-card-title {
+  padding: 20px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.receptionist-appointments-card-title h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.receptionist-appointments-card-title h2 span {
+  color: rgb(100, 120, 150);
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* TABLE HEADER */
+
+.receptionist-appointments-table-header {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.7fr
+    2fr
+    1.2fr
+    1.8fr;
+
+  align-items: center;
+
+  padding: 14px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+
+  color: rgb(90, 110, 140);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ROW */
+
+.receptionist-appointments-row {
+  min-height: 72px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.7fr
+    2fr
+    1.2fr
+    1.8fr;
+
+  align-items: center;
+
+  padding: 12px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.receptionist-appointments-row:last-child {
+  border-bottom: none;
+}
+
+.receptionist-appointments-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* TIME */
+
+.receptionist-appointments-time {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.receptionist-appointments-time strong {
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.receptionist-appointments-time span {
+  color: rgb(80, 100, 130);
+
+  font-size: 11px;
+}
+
+/* PATIENT */
+
+.receptionist-appointments-patient {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.receptionist-appointments-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: rgba(26, 184, 149, 0.15);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.receptionist-appointments-patient h3 {
+  margin: 0 0 3px;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.receptionist-appointments-patient p {
+  margin: 0;
+
+  color: rgb(80, 100, 130);
+
+  font-size: 11px;
+}
+
+/* REASON */
+
+.receptionist-appointments-reason {
+  color: rgb(120, 145, 180);
+
+  font-size: 13px;
+}
+
+/* STATUS */
+
+.receptionist-appointments-status {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.receptionist-appointments-status.scheduled {
+  background: rgba(55, 130, 255, 0.15);
+
+  color: rgb(75, 150, 255);
+}
+
+.receptionist-appointments-status.checked-in {
+  background: rgba(255, 180, 0, 0.15);
+
+  color: rgb(255, 190, 20);
+}
+
+.receptionist-appointments-status.completed {
+  background: rgba(26, 184, 149, 0.15);
+
+  color: rgb(81, 226, 195);
+}
+
+.receptionist-appointments-status.cancelled {
+  background: rgba(220, 50, 60, 0.15);
+
+  color: rgb(255, 80, 90);
+}
+
+/* ACTIONS */
+
+.receptionist-appointments-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.receptionist-appointments-actions button {
+  height: 31px;
+
+  padding: 0 10px;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.receptionist-appointment-cancel {
+  border: 1px solid rgb(90, 50, 60);
+
+  color: rgb(235, 95, 105);
+}
+
+.receptionist-appointment-cancel:hover {
+  background: rgba(255, 75, 90, 0.1);
+}
+
+.receptionist-appointment-checkin {
+  border: 1px solid rgb(25, 105, 90);
+
+  color: rgb(81, 226, 195);
+}
+
+.receptionist-appointment-checkin:hover {
+  background: rgba(26, 184, 149, 0.1);
+}
+
+.receptionist-appointment-view {
+  border: 1px solid rgb(50, 70, 100);
+
+  color: rgb(120, 150, 190);
+}
+
+.receptionist-appointment-view:hover {
+  border-color: rgb(80, 110, 150);
+
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .receptionist-appointments-card {
+    overflow-x: auto;
+  }
+
+  .receptionist-appointments-table-header,
+  .receptionist-appointments-row {
+    min-width: 950px;
+  }
+}
+
+@media (max-width: 800px) {
+  .receptionist-appointments-section {
+    padding: 20px;
+  }
+
+  .receptionist-appointments-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .receptionist-appointment-filters {
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+  }
+
+  .receptionist-appointment-filter {
+    flex-shrink: 0;
+  }
+}
+
+/* =========================
+   RECEPTIONIST PATIENT PROFILE
+========================= */
+
+.receptionist-patient-profile {
+  width: 92%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 25px 0 45px;
+}
+
+/* BACK */
+
+.receptionist-profile-back {
+  margin-bottom: 18px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgb(100, 125, 160);
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.receptionist-profile-back:hover {
+  color: rgb(81, 226, 195);
+}
+
+/* =========================
+   TOP CARD
+========================= */
+
+.receptionist-profile-card {
+  overflow: hidden;
+
+  margin-bottom: 20px;
+
+  padding: 28px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+/* PATIENT HEADER */
+
+.receptionist-profile-top {
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin: -28px -28px 24px;
+
+  padding: 28px;
+
+  background: linear-gradient(to right, rgb(13, 42, 52), rgb(10, 49, 44));
+}
+
+.receptionist-profile-avatar {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: rgb(14, 62, 74);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.receptionist-profile-main h2 {
+  margin: 0 0 5px;
+
+  color: white;
+
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.receptionist-profile-main p {
+  margin: 0;
+
+  color: rgb(100, 125, 155);
+
+  font-size: 12px;
+}
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.receptionist-profile-contact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+.receptionist-profile-info-box {
+  min-height: 62px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 12px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 9px;
+
+  background: rgb(10, 15, 23);
+}
+
+.receptionist-profile-info-box span {
+  color: rgb(90, 115, 145);
+
+  font-size: 11px;
+}
+
+.receptionist-profile-info-box strong {
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================
+   ALLERGY ALERT
+========================= */
+
+.receptionist-profile-allergy {
+  padding: 12px 14px;
+
+  margin-bottom: 17px;
+
+  border: 1px solid rgb(105, 80, 30);
+  border-radius: 9px;
+
+  background: rgba(255, 180, 0, 0.06);
+
+  color: rgb(255, 190, 20);
+
+  font-size: 12px;
+}
+
+/* =========================
+   TABS
+========================= */
+
+.receptionist-profile-tabs {
+  display: flex;
+
+  gap: 10px;
+}
+
+.receptionist-profile-tab {
+  padding: 9px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: rgb(100, 125, 160);
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.receptionist-profile-tab:hover {
+  color: rgb(81, 226, 195);
+}
+
+.receptionist-profile-tab.active {
+  background: rgb(26, 184, 149);
+
+  color: white;
+}
+
+/* =========================
+   OVERVIEW
+========================= */
+
+.receptionist-profile-bottom {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 18px;
+}
+
+/* DETAILS */
+
+.receptionist-profile-details-card {
+  padding: 22px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+.receptionist-profile-details-card h3 {
+  margin: 0 0 18px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.receptionist-profile-details-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.receptionist-profile-detail {
+  min-height: 64px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 12px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 9px;
+
+  background: rgb(10, 15, 23);
+}
+
+.receptionist-profile-detail span {
+  color: rgb(90, 115, 145);
+
+  font-size: 11px;
+}
+
+.receptionist-profile-detail strong {
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.receptionist-profile-side {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.receptionist-profile-next,
+.receptionist-profile-allergies-card {
+  padding: 20px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+.receptionist-profile-next {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.receptionist-profile-next span {
+  color: rgb(90, 115, 145);
+
+  font-size: 11px;
+}
+
+.receptionist-profile-next strong {
+  color: rgb(81, 226, 195);
+
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.receptionist-profile-next p {
+  margin: 0;
+
+  color: rgb(90, 115, 145);
+
+  font-size: 11px;
+}
+
+.receptionist-profile-allergies-card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.receptionist-profile-allergies-card span {
+  color: rgb(255, 190, 20);
+
+  font-size: 11px;
+}
+
+.receptionist-profile-allergies-card strong {
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================
+   APPOINTMENTS TAB
+========================= */
+
+.receptionist-profile-appointments {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.receptionist-profile-appointment {
+  min-height: 75px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 20px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 12px;
+
+  background: rgb(18, 26, 42);
+}
+
+.receptionist-profile-appointment h3 {
+  margin: 0 0 5px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.receptionist-profile-appointment p {
+  margin: 0;
+
+  color: rgb(90, 115, 145);
+
+  font-size: 11px;
+}
+
+.receptionist-profile-appointment-status {
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.receptionist-profile-appointment-status.scheduled {
+  background: rgba(55, 130, 255, 0.15);
+
+  color: rgb(75, 150, 255);
+}
+
+.receptionist-profile-appointment-status.completed {
+  background: rgba(26, 184, 149, 0.15);
+
+  color: rgb(81, 226, 195);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .receptionist-patient-profile {
+    width: 96%;
+  }
+
+  .receptionist-profile-contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .receptionist-profile-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .receptionist-profile-contact-grid,
+  .receptionist-profile-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .receptionist-profile-card {
+    padding: 20px;
+  }
+
+  .receptionist-profile-top {
+    margin: -20px -20px 20px;
+
+    padding: 20px;
+  }
+
+  .receptionist-profile-appointment {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+}
+/* =========================
+   RECEPTIONIST PATIENTS
+========================= */
+
+.receptionist-patients-section {
+  width: 100%;
+
+  padding: 30px 32px 50px;
+}
+
+/* TOOLBAR */
+
+.receptionist-patients-toolbar {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.receptionist-patients-search {
+  flex: 1;
+
+  height: 42px;
+
+  padding: 0 15px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 9px;
+
+  outline: none;
+
+  background: rgb(18, 26, 42);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.receptionist-patients-search::placeholder {
+  color: rgb(75, 100, 135);
+}
+
+.receptionist-patients-search:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+.receptionist-register-patient-button {
+  height: 42px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: rgb(26, 184, 149);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* CARD */
+
+.receptionist-patients-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+/* CARD HEADER */
+
+.receptionist-patients-card-header {
+  min-height: 58px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.receptionist-patients-card-header h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.receptionist-patients-card-header h2 span {
+  color: rgb(90, 110, 140);
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.receptionist-patients-card-header p {
+  margin: 0;
+
+  color: rgb(75, 95, 120);
+
+  font-size: 11px;
+}
+
+/* TABLE HEADER */
+
+.receptionist-patients-table-header {
+  display: grid;
+
+  grid-template-columns:
+    2.2fr
+    0.6fr
+    1.2fr
+    1.1fr
+    1.4fr
+    1.2fr;
+
+  align-items: center;
+
+  padding: 14px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+
+  color: rgb(90, 110, 140);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* PATIENT ROW */
+
+.receptionist-patient-row {
+  min-height: 72px;
+
+  display: grid;
+
+  grid-template-columns:
+    2.2fr
+    0.6fr
+    1.2fr
+    1.1fr
+    1.4fr
+    1.2fr;
+
+  align-items: center;
+
+  padding: 12px 22px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.receptionist-patient-row:last-child {
+  border-bottom: none;
+}
+
+.receptionist-patient-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* PATIENT */
+
+.receptionist-patient-main {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.receptionist-patient-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: rgba(26, 184, 149, 0.15);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.receptionist-patient-main h3 {
+  margin: 0 0 3px;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.receptionist-patient-main p {
+  margin: 0;
+
+  color: rgb(75, 95, 120);
+
+  font-size: 10px;
+}
+
+/* VALUES */
+
+.receptionist-patient-cell {
+  color: rgb(125, 150, 185);
+
+  font-size: 13px;
+}
+
+.receptionist-patient-next {
+  color: rgb(81, 226, 195);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ACTIONS */
+
+.receptionist-patient-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.receptionist-patient-actions button {
+  height: 31px;
+
+  padding: 0 11px;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.receptionist-patient-view {
+  border: 1px solid rgb(25, 105, 90);
+
+  color: rgb(81, 226, 195);
+}
+
+.receptionist-patient-view:hover {
+  background: rgba(26, 184, 149, 0.1);
+}
+
+.receptionist-patient-edit {
+  border: 1px solid rgb(50, 70, 100);
+
+  color: rgb(120, 150, 190);
+}
+
+.receptionist-patient-edit:hover {
+  border-color: rgb(80, 110, 150);
+
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .receptionist-patients-card {
+    overflow-x: auto;
+  }
+
+  .receptionist-patients-table-header,
+  .receptionist-patient-row {
+    min-width: 950px;
+  }
+}
+
+@media (max-width: 700px) {
+  .receptionist-patients-section {
+    padding: 20px;
+  }
+
+  .receptionist-patients-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .receptionist-register-patient-button {
+    width: 100%;
+  }
+}
+/* =========================
+   REGISTER PATIENT
+========================= */
+
+.register-patient-page {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  padding: 30px 32px 50px;
+}
+
+/* BACK */
+
+.register-patient-back {
+  margin-bottom: 20px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgb(100, 125, 160);
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.register-patient-back:hover {
+  color: rgb(81, 226, 195);
+}
+
+/* HEADING */
+
+.register-patient-heading {
+  margin-bottom: 20px;
+}
+
+.register-patient-heading h2 {
+  margin: 0 0 6px;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.register-patient-heading p {
+  margin: 0;
+
+  color: rgb(90, 115, 150);
+
+  font-size: 13px;
+}
+
+/* CARD */
+
+.register-patient-form-card {
+  width: 100%;
+
+  padding: 24px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 14px;
+
+  background: rgb(18, 26, 42);
+}
+
+/* GRID */
+
+.register-patient-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+/* FIELD */
+
+.register-patient-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.register-patient-field label {
+  color: rgb(100, 125, 155);
+
+  font-size: 11px;
+}
+
+.register-patient-field input,
+.register-patient-field select {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 13px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 9px;
+
+  outline: none;
+
+  background: rgb(10, 15, 23);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.register-patient-field input::placeholder {
+  color: rgb(75, 95, 120);
+}
+
+.register-patient-field input:focus,
+.register-patient-field select:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+/* BUTTONS */
+
+.register-patient-form-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+.register-patient-form-actions button {
+  height: 42px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* CANCEL */
+
+.register-patient-cancel {
+  border: 1px solid rgb(40, 50, 65);
+
+  background: transparent;
+
+  color: rgb(100, 125, 160);
+}
+
+.register-patient-cancel:hover {
+  color: white;
+
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* SUBMIT */
+
+.register-patient-submit {
+  border: none;
+
+  background: rgb(26, 184, 149);
+
+  color: white;
+}
+
+.register-patient-submit:hover {
+  background: rgb(31, 204, 166);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .register-patient-page {
+    max-width: none;
+
+    padding: 22px 20px;
+  }
+
+  .register-patient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .register-patient-form-actions {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   RECEPTIONIST PROFILE
+========================= */
+
+.receptionist-profile-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 40px 30px;
+}
+
+.receptionist-profile-card {
+  width: 100%;
+  max-width: 900px;
+  min-height: 520px;
+
+  overflow: hidden;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 16px;
+
+  background-color: rgb(18, 26, 42);
+}
+
+/* =========================
+   TOP
+========================= */
+
+.receptionist-profile-top {
+  min-height: 190px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 50px 32px;
+
+  background-color: rgb(11, 47, 48);
+}
+
+.receptionist-profile-avatar {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  background-color: rgb(14, 62, 74);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.receptionist-profile-top h2 {
+  margin: 0 0 8px;
+
+  color: white;
+
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.receptionist-profile-top p {
+  margin: 0;
+
+  color: rgb(81, 226, 195);
+
+  font-size: 16px;
+}
+
+/* =========================
+   INFORMATION
+========================= */
+
+.receptionist-profile-info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  padding: 45px 32px 50px;
+}
+
+.receptionist-profile-info-box {
+  min-height: 115px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 22px 20px;
+
+  border: 1px solid rgb(40, 50, 65);
+  border-radius: 12px;
+
+  background-color: rgb(10, 15, 23);
+}
+
+.receptionist-profile-info-label {
+  color: rgb(100, 120, 150);
+
+  font-size: 13px;
+}
+
+.receptionist-profile-info-value {
+  color: white;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .receptionist-profile-section {
+    padding: 20px;
+  }
+
+  .receptionist-profile-card {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .receptionist-profile-top {
+    min-height: 160px;
+
+    padding: 30px;
+  }
+
+  .receptionist-profile-avatar {
+    width: 70px;
+    height: 70px;
+
+    font-size: 19px;
+  }
+
+  .receptionist-profile-top h2 {
+    font-size: 22px;
+  }
+
+  .receptionist-profile-info-grid {
+    grid-template-columns: 1fr;
+
+    padding: 30px;
+  }
+
+  .receptionist-profile-info-box {
+    min-height: 100px;
+  }
+}
+
+/* =========================
+   PATIENT PAGE
+========================= */
+
+.patient-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: rgb(10, 15, 23);
+
+  color: white;
+}
+
+/* =========================
+   PATIENT SIDEBAR
+========================= */
+
+.patient-sidebar {
+  width: 240px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(9, 14, 22);
+
+  border-right: 1px solid rgb(40, 50, 65);
+
+  z-index: 1000;
+}
+
+/* =========================
+   SIDEBAR BRAND
+========================= */
+
+.patient-sidebar-brand {
+  height: 75px;
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 18px;
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+.patient-sidebar-logo {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background-color: rgb(26, 184, 149);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.patient-sidebar-clinic {
+  flex: 1;
+
+  overflow: hidden;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.patient-sidebar-collapse {
+  color: rgb(85, 110, 145);
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+
+.patient-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 28px 12px;
+}
+
+.patient-sidebar-link {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 13px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: none;
+
+  color: rgb(130, 151, 184);
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.patient-sidebar-link:hover {
+  color: rgb(81, 226, 195);
+
+  background-color: rgba(26, 184, 149, 0.08);
+}
+
+.patient-sidebar-link.active {
+  color: rgb(81, 226, 195);
+
+  background-color: rgba(26, 184, 149, 0.16);
+}
+
+.patient-sidebar-icon {
+  width: 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  font-size: 18px;
+}
+
+/* =========================
+   SIDEBAR BOTTOM
+========================= */
+
+.patient-sidebar-bottom {
+  margin-top: auto;
+
+  padding: 24px 20px;
+
+  border-top: 1px solid rgb(40, 50, 65);
+}
+
+.patient-sidebar-user {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-bottom: 25px;
+}
+
+.patient-sidebar-user strong {
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.patient-sidebar-user span {
+  color: rgb(81, 226, 195);
+
+  font-size: 12px;
+}
+
+.patient-sidebar-logout {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgb(130, 151, 184);
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.patient-sidebar-logout:hover {
+  color: white;
+}
+
+/* =========================
+   PATIENT CONTENT
+========================= */
+
+.patient-content {
+  min-height: 100vh;
+
+  margin-left: 240px;
+
+  padding: 0;
+
+  background-color: rgb(10, 15, 23);
+
+  color: white;
+}
+
+/* =========================
+   PATIENT HEADER
+========================= */
+
+.patient-header {
+  width: 100%;
+  height: 75px;
+  min-height: 75px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 32px;
+
+  background-color: rgb(10, 15, 23);
+
+  border-bottom: 1px solid rgb(40, 50, 65);
+}
+
+/* =========================
+   HEADER LEFT
+========================= */
+
+.patient-header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 6px;
+}
+
+.patient-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0;
+
+  font-size: 12px;
+}
+
+.patient-breadcrumb span {
+  color: rgb(105, 128, 160);
+}
+
+.patient-breadcrumb strong {
+  color: rgb(81, 226, 195);
+
+  font-weight: 500;
+}
+
+.patient-header-left h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* =========================
+   HEADER RIGHT
+========================= */
+
+.patient-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.patient-notification {
+  width: 36px;
+  height: 36px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgb(130, 151, 184);
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.patient-notification:hover {
+  color: white;
+}
+
+.patient-notification-dot {
+  width: 5px;
+  height: 5px;
+
+  position: absolute;
+
+  top: 4px;
+  right: 4px;
+
+  border-radius: 50%;
+
+  background-color: rgb(26, 184, 149);
+}
+
+/* =========================
+   PATIENT AVATAR
+========================= */
+
+.patient-header-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: rgba(26, 184, 149, 0.16);
+
+  color: rgb(81, 226, 195);
+
+  font-size: 13px;
+  font-weight: 600;
 }

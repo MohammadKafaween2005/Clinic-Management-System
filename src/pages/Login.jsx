@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import LoginIntro from "../components/LoginIntro";
-import LoginForm from "../components/LoginForm";
-import Register from "../components/Register";
+import LoginIntro from "../components/sharedcomponents/LoginIntro";
+import LoginForm from "../components/sharedcomponents/LoginForm";
+import Register from "../components/sharedcomponents/Register";
 
 export default function Login() {
   const [register, setRegister] = useState(false);
