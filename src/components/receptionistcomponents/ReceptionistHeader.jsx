@@ -1,8 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
 import { ReceptionistContext } from "../../context/ReceptionistContext";
 
 export default function ReceptionistHeader() {
   const { section } = useContext(ReceptionistContext);
+
+  const [profile, setProfile] = useState(null);
 
   const titles = {
     home: "Dashboard",
@@ -15,6 +18,36 @@ export default function ReceptionistHeader() {
   };
 
   const currentTitle = titles[section];
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        if (!user || user.role !== "receptionist") {
+          return;
+        }
+
+        const response = await axios.get(
+          `http://localhost:5000/api/profile/receptionist/${user.profile_id}`,
+        );
+
+        setProfile(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchProfile();
+  }, []);
+
+  const getInitial = () => {
+    if (!profile?.full_name) {
+      return "R";
+    }
+
+    return profile.full_name.charAt(0).toUpperCase();
+  };
 
   return (
     <header className="receptionist-header">
@@ -37,8 +70,11 @@ export default function ReceptionistHeader() {
           ♧<span className="notification-dot"></span>
         </button>
 
-        <div className="receptionist-header-avatar" title="Elham">
-          E
+        <div
+          className="receptionist-header-avatar"
+          title={profile?.full_name || "Receptionist"}
+        >
+          {getInitial()}
         </div>
       </div>
     </header>
