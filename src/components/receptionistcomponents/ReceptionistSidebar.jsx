@@ -1,9 +1,41 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { ReceptionistContext } from "../../context/ReceptionistContext";
 
 export default function ReceptionistSidebar() {
   const { section, setSection } = useContext(ReceptionistContext);
+
+  const navigate = useNavigate();
+
+  const [profile, setProfile] = useState(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        if (!user || user.role !== "receptionist") {
+          return;
+        }
+
+        const response = await axios.get(
+          `http://localhost:5000/api/profile/receptionist/${user.profile_id}`,
+        );
+
+        setProfile(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchProfile();
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/Login");
+  };
 
   return (
     <aside className="receptionist-sidebar">
@@ -17,6 +49,7 @@ export default function ReceptionistSidebar() {
 
       <nav className="receptionist-nav">
         <button
+          type="button"
           className={`receptionist-nav-item ${
             section === "home" ? "active" : ""
           }`}
@@ -28,6 +61,7 @@ export default function ReceptionistSidebar() {
         </button>
 
         <button
+          type="button"
           className={`receptionist-nav-item ${
             section === "appointments" ? "active" : ""
           }`}
@@ -39,6 +73,7 @@ export default function ReceptionistSidebar() {
         </button>
 
         <button
+          type="button"
           className={`receptionist-nav-item ${
             section === "patients" ? "active" : ""
           }`}
@@ -50,6 +85,7 @@ export default function ReceptionistSidebar() {
         </button>
 
         <button
+          type="button"
           className={`receptionist-nav-item ${
             section === "register" ? "active" : ""
           }`}
@@ -61,6 +97,7 @@ export default function ReceptionistSidebar() {
         </button>
 
         <button
+          type="button"
           className={`receptionist-nav-item ${
             section === "profile" ? "active" : ""
           }`}
@@ -74,15 +111,19 @@ export default function ReceptionistSidebar() {
 
       <div className="receptionist-user">
         <div className="receptionist-user-info">
-          <strong>Elham</strong>
+          <strong>{profile?.full_name || "Receptionist"}</strong>
 
           <span>Receptionist</span>
         </div>
 
-        <Link to="/" className="receptionist-logout">
+        <button
+          type="button"
+          className="receptionist-logout"
+          onClick={handleLogout}
+        >
           <span>↪</span>
           Logout
-        </Link>
+        </button>
       </div>
     </aside>
   );

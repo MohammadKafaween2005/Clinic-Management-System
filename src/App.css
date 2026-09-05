@@ -9001,3 +9001,169 @@ html {
     width: 100%;
   }
 }
+.home-checkin-button:disabled,
+.home-cancel-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.receptionist-appointment-checkin:disabled,
+.receptionist-appointment-cancel:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.appointment-patient-card {
+  background: rgb(18, 26, 42);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.appointment-patient-card h3 {
+  margin: 0 0 12px;
+  color: white;
+}
+
+.appointment-patient-select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  background: rgb(10, 15, 23);
+  color: white;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  font: inherit;
+  outline: none;
+}
+
+.appointment-patient-select:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+.appointment-time-option:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.appointment-booking-error {
+  color: #ef4444;
+  margin: 12px 0;
+}
+
+.appointment-booking-success {
+  color: rgb(81, 226, 195);
+  margin: 12px 0;
+}
+.receptionist-patient-edit-card {
+  background: rgb(18, 26, 42);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.receptionist-patient-edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.receptionist-patient-edit-header h2 {
+  margin: 0;
+}
+
+.receptionist-patient-edit-header button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.receptionist-patient-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.receptionist-patient-edit-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.receptionist-patient-edit-grid label {
+  font-size: 14px;
+}
+
+.receptionist-patient-edit-grid input,
+.receptionist-patient-edit-grid select {
+  background: rgb(10, 15, 23);
+  color: white;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 11px 12px;
+  font: inherit;
+  outline: none;
+}
+
+.receptionist-patient-edit-grid input:focus,
+.receptionist-patient-edit-grid select:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+.receptionist-patient-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.receptionist-patient-edit-actions button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.receptionist-patient-error {
+  color: #ef4444;
+  margin-bottom: 15px;
+}
+
+.receptionist-patient-success {
+  color: rgb(81, 226, 195);
+  margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+  .receptionist-patient-edit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.register-patient-error {
+  color: #ef4444;
+  margin-top: 16px;
+}
+
+.register-patient-success {
+  color: rgb(81, 226, 195);
+  margin-top: 16px;
+}
+
+.register-patient-submit:disabled,
+.register-patient-cancel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.receptionist-logout {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}

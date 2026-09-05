@@ -1,7 +1,8 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import ReceptionistProvider from "../context/ReceptionistProvider";
 import { ReceptionistContext } from "../context/ReceptionistContext";
+
 import NewAppointment from "../components/receptionistcomponents/NewAppointment";
 import ReceptionistSidebar from "../components/receptionistcomponents/ReceptionistSidebar";
 import ReceptionistHeader from "../components/receptionistcomponents/ReceptionistHeader";
@@ -23,17 +24,29 @@ export default function Receptionist() {
 function ReceptionistPage() {
   const { section } = useContext(ReceptionistContext);
 
+  const [selectedPatientId, setSelectedPatientId] = useState(null);
+
   return (
     <div className="receptionist-page">
       <ReceptionistSidebar />
 
       <main className="receptionist-content">
         <ReceptionistHeader />
-        {section === "home" && <ReceptionistHome />}
-        {section === "patients" && <ReceptionistPatients />}
-        {section === "appointments" && <ReceptionistAppointments />}
+        {section === "home" && (
+          <ReceptionistHome setSelectedPatientId={setSelectedPatientId} />
+        )}
+        {section === "patients" && (
+          <ReceptionistPatients setSelectedPatientId={setSelectedPatientId} />
+        )}
+        {section === "appointments" && (
+          <ReceptionistAppointments
+            setSelectedPatientId={setSelectedPatientId}
+          />
+        )}{" "}
         {section === "newAppointment" && <NewAppointment />}
-        {section === "patientProfile" && <ReceptionistPatientProfile />}
+        {section === "patientProfile" && (
+          <ReceptionistPatientProfile patientId={selectedPatientId} />
+        )}
         {section === "register" && <RegisterPatient />}
         {section === "profile" && <ReceptionistProfile />}
       </main>

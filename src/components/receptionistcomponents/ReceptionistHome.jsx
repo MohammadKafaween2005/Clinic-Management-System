@@ -1,101 +1,224 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
 import { ReceptionistContext } from "../../context/ReceptionistContext";
 
-export default function ReceptionistHome() {
+export default function ReceptionistHome({ setSelectedPatientId }) {
   const { setSection } = useContext(ReceptionistContext);
 
-  const appointments = [
-    {
-      time: "08:30 AM",
-      duration: "20min",
-      initials: "RN",
-      name: "Robert Nguyen",
-      reason: "Blood pressure follow-up",
-      status: "Checked In",
-      statusClass: "checked",
-    },
-    {
-      time: "09:00 AM",
-      duration: "30min",
-      initials: "JT",
-      name: "James Thornton",
-      reason: "Annual health check",
-      status: "Completed",
-      statusClass: "completed",
-    },
-    {
-      time: "10:00 AM",
-      duration: "20min",
-      initials: "AC",
-      name: "Amelia Chen",
-      reason: "Skin rash assessment",
-      status: "Scheduled",
-      statusClass: "scheduled",
-    },
-    {
-      time: "11:00 AM",
-      duration: "40min",
-      initials: "PS",
-      name: "Priya Sharma",
-      reason: "Mental health review",
-      status: "Scheduled",
-      statusClass: "scheduled",
-    },
-    {
-      time: "01:30 PM",
-      duration: "20min",
-      initials: "SW",
-      name: "Sophie Williams",
-      reason: "Routine check-up",
-      status: "Scheduled",
-      statusClass: "scheduled",
-    },
-    {
-      time: "02:30 PM",
-      duration: "30min",
-      initials: "DO",
-      name: "David Okafor",
-      reason: "Diabetes management",
-      status: "Cancelled",
-      statusClass: "cancelled",
-    },
-  ];
+  const [appointments, setAppointments] = useState([]);
+  const [patients, setPatients] = useState([]);
+  const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  const recentPatients = [
-    {
-      initials: "JT",
-      name: "James Thornton",
-      phone: "(02) 8123 4567",
-      date: "2026-08-16",
-    },
-    {
-      initials: "AC",
-      name: "Amelia Chen",
-      phone: "(02) 8234 5678",
-      date: "2026-08-20",
-    },
-    {
-      initials: "RN",
-      name: "Robert Nguyen",
-      phone: "(02) 8345 6789",
-      date: "2026-08-14",
-    },
-    {
-      initials: "PS",
-      name: "Priya Sharma",
-      phone: "(02) 8456 7890",
-      date: "2026-08-22",
-    },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+
+        const [appointmentsResponse, patientsResponse] = await Promise.all([
+          axios.get("http://localhost:5000/api/appointments"),
+          axios.get("http://localhost:5000/api/patients"),
+        ]);
+
+        setAppointments(appointmentsResponse.data);
+
+        setPatients(patientsResponse.data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const now = new Date();
+
+  const today =
+    `${now.getFullYear()}-` +
+    `${String(now.getMonth() + 1).padStart(2, "0")}-` +
+    `${String(now.getDate()).padStart(2, "0")}`;
+
+  const displayDate = now.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  const formatTime = (time) => {
+    if (!time) return "";
+
+    const [hoursString, minutes] = time.split(":");
+
+    let hours = Number(hoursString);
+
+    const period = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12;
+
+    if (hours === 0) {
+      hours = 12;
+    }
+
+    return `${String(hours).padStart(2, "0")}:${minutes} ${period}`;
+  };
+
+  const getInitials = (firstName, lastName) => {
+    const first = firstName?.charAt(0) || "";
+
+    const last = lastName?.charAt(0) || "";
+
+    return `${first}${last}`.toUpperCase();
+  };
+
+  const getStatusClass = (status) => {
+    if (status === "Checked In") {
+      return "checked";
+    }
+
+    if (status === "Completed") {
+      return "completed";
+    }
+
+    if (status === "Cancelled") {
+      return "cancelled";
+    }
+
+    return "scheduled";
+  };
+
+  const todayAppointments = appointments
+    .filter((appointment) => {
+      const appointmentDate = appointment.appointment_date?.split("T")[0];
+
+      return appointmentDate === today;
+    })
+    .sort((a, b) => a.appointment_time.localeCompare(b.appointment_time));
+
+  const filteredAppointments = todayAppointments.filter((appointment) => {
+    const fullName = `${appointment.first_name || ""} ${
+      appointment.last_name || ""
+    }`.toLowerCase();
+
+    const reason = (appointment.reason || "").toLowerCase();
+
+    const searchValue = search.toLowerCase();
+
+    return fullName.includes(searchValue) || reason.includes(searchValue);
+  });
+
+  const waiting = todayAppointments.filter(
+    (appointment) => appointment.status === "Checked In",
+  ).length;
+
+  const completed = todayAppointments.filter(
+    (appointment) => appointment.status === "Completed",
+  ).length;
+
+  const cancelled = todayAppointments.filter(
+    (appointment) => appointment.status === "Cancelled",
+  ).length;
+
+  const remaining = todayAppointments.filter(
+    (appointment) => appointment.status === "Scheduled",
+  ).length;
+
+  const handleCheckIn = async (appointment) => {
+    if (appointment.status !== "Scheduled") {
+      return;
+    }
+
+    try {
+      const response = await axios.put(
+        `http://localhost:5000/api/appointments/${appointment.appointment_id}`,
+        {
+          patient_id: appointment.patient_id,
+
+          doctor_id: appointment.doctor_id,
+
+          appointment_date: appointment.appointment_date.split("T")[0],
+
+          appointment_time: appointment.appointment_time,
+
+          duration_minutes: appointment.duration_minutes || 30,
+
+          reason: appointment.reason,
+
+          status: "Checked In",
+        },
+      );
+
+      setAppointments((previousAppointments) =>
+        previousAppointments.map((item) =>
+          item.appointment_id === appointment.appointment_id
+            ? {
+                ...item,
+                ...response.data,
+
+                first_name: item.first_name,
+
+                last_name: item.last_name,
+              }
+            : item,
+        ),
+      );
+    } catch (error) {
+      console.error(error);
+
+      alert(error.response?.data?.error || "Could not check in patient.");
+    }
+  };
+
+  const handleCancel = async (appointment) => {
+    if (appointment.status === "Cancelled") {
+      return;
+    }
+
+    const confirmed = window.confirm(
+      `Cancel the appointment for ${appointment.first_name} ${appointment.last_name}?`,
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    try {
+      await axios.put(
+        `http://localhost:5000/api/appointments/${appointment.appointment_id}/cancel`,
+      );
+
+      setAppointments((previousAppointments) =>
+        previousAppointments.map((item) =>
+          item.appointment_id === appointment.appointment_id
+            ? {
+                ...item,
+                status: "Cancelled",
+              }
+            : item,
+        ),
+      );
+    } catch (error) {
+      console.error(error);
+
+      alert(error.response?.data?.error || "Could not cancel appointment.");
+    }
+  };
+
+  const recentPatients = [...patients]
+    .sort((a, b) => b.patient_id - a.patient_id)
+    .slice(0, 4);
 
   return (
     <section className="receptionist-home">
       {/* TOP AREA */}
+
       <div className="receptionist-home-top">
         <div>
-          <p className="receptionist-date">Thursday, August 14 · 2026</p>
+          <p className="receptionist-date">{displayDate}</p>
 
-          <h2>6 appointments today</h2>
+          <h2>{todayAppointments.length} appointments today</h2>
         </div>
 
         <div className="receptionist-home-actions">
@@ -116,39 +239,46 @@ export default function ReceptionistHome() {
       </div>
 
       {/* SUMMARY */}
+
       <div className="appointment-summary">
         <div className="summary-chip waiting">
           <span>●</span>
-          <strong>1</strong>
+          <strong>{waiting}</strong>
           <p>Waiting</p>
         </div>
 
         <div className="summary-chip completed">
           <span>●</span>
-          <strong>1</strong>
+          <strong>{completed}</strong>
           <p>Completed</p>
         </div>
 
         <div className="summary-chip cancelled">
           <span>●</span>
-          <strong>1</strong>
+          <strong>{cancelled}</strong>
           <p>Cancelled</p>
         </div>
 
         <div className="summary-chip remaining">
           <span>●</span>
-          <strong>4</strong>
+          <strong>{remaining}</strong>
           <p>Remaining</p>
         </div>
       </div>
 
       {/* APPOINTMENTS */}
+
       <div className="receptionist-home-card">
         <div className="schedule-card-top">
           <div className="patient-search-box">
             <span>⌕</span>
 
-            <input type="text" placeholder="Search patient..." />
+            <input
+              type="text"
+              placeholder="Search patient..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
 
           <button
@@ -160,60 +290,99 @@ export default function ReceptionistHome() {
         </div>
 
         <div className="receptionist-appointment-list">
-          {appointments.map((appointment, index) => (
-            <div className="receptionist-home-appointment" key={index}>
-              {/* TIME */}
-              <div className="home-appointment-time">
-                <strong>{appointment.time}</strong>
+          {loading ? (
+            <p>Loading appointments...</p>
+          ) : filteredAppointments.length === 0 ? (
+            <p>No appointments found.</p>
+          ) : (
+            filteredAppointments.map((appointment) => (
+              <div
+                className="receptionist-home-appointment"
+                key={appointment.appointment_id}
+              >
+                {/* TIME */}
 
-                <span>{appointment.duration}</span>
+                <div className="home-appointment-time">
+                  <strong>{formatTime(appointment.appointment_time)}</strong>
+
+                  <span>
+                    {appointment.duration_minutes || 30}
+                    min
+                  </span>
+                </div>
+
+                {/* AVATAR */}
+
+                <div className="home-appointment-avatar">
+                  {getInitials(appointment.first_name, appointment.last_name)}
+                </div>
+
+                {/* PATIENT */}
+
+                <div className="home-appointment-info">
+                  <strong>
+                    {appointment.first_name} {appointment.last_name}
+                  </strong>
+
+                  <span>{appointment.reason || "No reason provided"}</span>
+                </div>
+
+                {/* STATUS */}
+
+                <div className="home-appointment-status-container">
+                  <span
+                    className={`home-appointment-status ${getStatusClass(
+                      appointment.status,
+                    )}`}
+                  >
+                    ● {appointment.status}
+                  </span>
+                </div>
+
+                {/* ACTIONS */}
+
+                <div className="home-appointment-actions">
+                  <button
+                    type="button"
+                    className="home-cancel-button"
+                    disabled={
+                      appointment.status === "Cancelled" ||
+                      appointment.status === "Completed"
+                    }
+                    onClick={() => handleCancel(appointment)}
+                  >
+                    Cancel
+                  </button>
+
+                  <button
+                    type="button"
+                    className="home-checkin-button"
+                    disabled={appointment.status !== "Scheduled"}
+                    onClick={() => handleCheckIn(appointment)}
+                  >
+                    Check In
+                  </button>
+
+                  <button
+                    type="button"
+                    className="home-view-button"
+                    onClick={() => {
+                      setSelectedPatientId(appointment.patient_id);
+
+                      setSection("patientProfile");
+                    }}
+                  >
+                    View
+                  </button>
+                </div>
               </div>
-
-              {/* AVATAR */}
-              <div className="home-appointment-avatar">
-                {appointment.initials}
-              </div>
-
-              {/* PATIENT */}
-              <div className="home-appointment-info">
-                <strong>{appointment.name}</strong>
-
-                <span>{appointment.reason}</span>
-              </div>
-
-              {/* STATUS */}
-              <div className="home-appointment-status-container">
-                <span
-                  className={`home-appointment-status ${appointment.statusClass}`}
-                >
-                  ● {appointment.status}
-                </span>
-              </div>
-
-              {/* ACTIONS */}
-              <div className="home-appointment-actions">
-                <button type="button" className="home-cancel-button">
-                  Cancel
-                </button>
-
-                <button type="button" className="home-checkin-button">
-                  Check In
-                </button>
-
-                <button
-                  type="button"
-                  className="home-view-button"
-                  onClick={() => setSection("patientProfile")}
-                >
-                  View
-                </button>
-              </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
 
       {/* RECENT PATIENTS */}
+
       <div className="recent-patients-card">
         <div className="recent-patients-header">
           <h3>Recent Patients</h3>
@@ -227,17 +396,24 @@ export default function ReceptionistHome() {
         </div>
 
         <div className="recent-patients-grid">
-          {recentPatients.map((patient, index) => (
-            <div className="recent-patient-item" key={index}>
-              <div className="recent-patient-avatar">{patient.initials}</div>
-
-              <div className="recent-patient-info">
-                <strong>{patient.name}</strong>
-
-                <span>{patient.phone}</span>
+          {recentPatients.map((patient) => (
+            <div className="recent-patient-item" key={patient.patient_id}>
+              <div className="recent-patient-avatar">
+                {getInitials(patient.first_name, patient.last_name)}
               </div>
 
-              <span className="recent-patient-date">{patient.date}</span>
+              <div className="recent-patient-info">
+                <strong>
+                  {patient.first_name} {patient.last_name}
+                </strong>
+
+                <span>{patient.phone || "No phone"}</span>
+              </div>
+
+              <span className="recent-patient-date">
+                P-
+                {String(patient.patient_id).padStart(4, "0")}
+              </span>
             </div>
           ))}
         </div>
