@@ -25,7 +25,14 @@ function App() {
           }
         />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Doctor" element={<Doctor />} />
+        <Route
+          path="/Doctor"
+          element={
+            <ProtectedRoute allowedRole="doctor">
+              <Doctor />
+            </ProtectedRoute>
+          }
+        />{" "}
         <Route path="/Receptionist" element={<Receptionist />} />
         <Route
           path="/Patient"

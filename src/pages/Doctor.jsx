@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import { DoctorContext } from "../context/DoctorContext";
 import DoctorProvider from "../context/DoctorProvider";
@@ -21,6 +21,8 @@ export default function Doctor() {
 function DoctorPage() {
   const { section } = useContext(DoctorContext);
 
+  const [selectedPatientId, setSelectedPatientId] = useState(null);
+
   return (
     <div className="doctor-page">
       <DoctorSidebar />
@@ -28,15 +30,20 @@ function DoctorPage() {
       <main className="doctor-content">
         <DoctorHeader />
 
-        {section === "home" && <DoctorHome />}
-
+        {section === "home" && (
+          <DoctorHome setSelectedPatientId={setSelectedPatientId} />
+        )}
         {section === "schedule" && <DoctorSchedule />}
 
-        {section === "patients" && <DoctorPatients />}
+        {section === "patients" && (
+          <DoctorPatients setSelectedPatientId={setSelectedPatientId} />
+        )}
 
         {section === "profile" && <DoctorProfile />}
 
-        {section === "record" && <DoctorViewRecord />}
+        {section === "record" && (
+          <DoctorViewRecord patientId={selectedPatientId} />
+        )}
       </main>
     </div>
   );
