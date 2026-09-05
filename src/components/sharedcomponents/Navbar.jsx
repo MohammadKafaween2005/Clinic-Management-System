@@ -27,7 +27,7 @@ export default function Navbar() {
           <Link to="/Login">Login</Link>
 
           <span className="BookAppointment">
-            <Link to="/BookAppointment">Book Appointment</Link>
+            <Link to="/Login">Book Appointment</Link>
           </span>
         </div>
       </div>

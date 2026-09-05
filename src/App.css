@@ -7470,6 +7470,13 @@ html {
   color: white;
 }
 
+.patient-sidebar-logout {
+  border: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  font: inherit;
+}
 /* =========================
    PATIENT CONTENT
 ========================= */
@@ -7945,7 +7952,59 @@ html {
   color: rgb(105, 128, 160);
   font-size: 11px;
 }
+.patient-time-button {
+  position: relative;
+}
 
+.patient-time-button.booked {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.patient-time-booked-label {
+  display: block;
+  font-size: 0.68rem;
+  margin-top: 3px;
+  opacity: 0.8;
+}
+
+.patient-reason-card {
+  position: relative;
+}
+
+.patient-reason-count {
+  display: block;
+  margin-top: 6px;
+  text-align: right;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.patient-book-message {
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.patient-book-message.success {
+  background: rgba(26, 184, 149, 0.12);
+  color: rgb(81, 226, 195);
+  border: 1px solid rgba(26, 184, 149, 0.35);
+}
+
+.patient-book-message.error {
+  background: rgba(220, 70, 70, 0.1);
+  color: rgb(235, 110, 110);
+  border: 1px solid rgba(220, 70, 70, 0.3);
+}
+.patient-calendar-date:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.patient-calendar-date:not(:disabled):hover {
+  transform: translateY(-1px);
+}
 /* ========================================
    CLINIC CONTACT
 ======================================== */

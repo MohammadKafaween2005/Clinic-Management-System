@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import BookAppointment from "./pages/BookAppointment";
 import Doctor from "./pages/Doctor";
 import Patient from "./pages/Patient";
+import ProtectedRoute from "./components/sharedcomponents/ProtectedRoute";
 function App() {
   return (
     <Router>
@@ -23,11 +24,17 @@ function App() {
             </>
           }
         />
-
         <Route path="/Login" element={<Login />} />
         <Route path="/Doctor" element={<Doctor />} />
         <Route path="/Receptionist" element={<Receptionist />} />
-        <Route path="/Patient" element={<Patient />} />
+        <Route
+          path="/Patient"
+          element={
+            <ProtectedRoute allowedRole="patient">
+              <Patient />
+            </ProtectedRoute>
+          }
+        />{" "}
         <Route path="/BookAppointment" element={<BookAppointment />} />
       </Routes>
     </Router>
