@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { PatientContext } from "../../context/PatientContext";
 
-export default function PatientBookAppointment() {
+export default function PatientReschedule({ appointment }) {
+  const { setSection } = useContext(PatientContext);
+
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState("");
@@ -55,6 +58,26 @@ export default function PatientBookAppointment() {
     return `${String(hours).padStart(2, "0")}:${minutes}:00`;
   };
 
+  const convertTimeTo12Hour = (time) => {
+    if (!time) {
+      return "";
+    }
+
+    const [hoursString, minutes] = time.split(":");
+
+    let hours = Number(hoursString);
+
+    const period = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12;
+
+    if (hours === 0) {
+      hours = 12;
+    }
+
+    return `${String(hours).padStart(2, "0")}:${minutes} ${period}`;
+  };
+
   const getSelectedDateString = () => {
     if (!selectedDate) {
       return null;
@@ -65,8 +88,28 @@ export default function PatientBookAppointment() {
     ).padStart(2, "0")}`;
   };
 
+  // Load old appointment values
   useEffect(() => {
-    if (!selectedDate) {
+    if (!appointment) {
+      return;
+    }
+
+    const oldDate = appointment.appointment_date.split("T")[0];
+
+    const [oldYear, oldMonth, oldDay] = oldDate.split("-").map(Number);
+
+    setCurrentDate(new Date(oldYear, oldMonth - 1, 1));
+
+    setSelectedDate(oldDay);
+
+    setSelectedTime(convertTimeTo12Hour(appointment.appointment_time));
+
+    setReason(appointment.reason || "");
+  }, [appointment]);
+
+  // Get appointments already booked on selected day
+  useEffect(() => {
+    if (!selectedDate || !appointment) {
       return;
     }
 
@@ -82,12 +125,24 @@ export default function PatientBookAppointment() {
         );
 
         const occupiedTimes = response.data
-          .filter((appointment) => appointment.status !== "Cancelled")
-          .map((appointment) => appointment.appointment_time);
+          .filter((item) => {
+            if (item.status === "Cancelled") {
+              return false;
+            }
+
+            // Do not count the appointment we are currently editing
+            if (item.appointment_id === appointment.appointment_id) {
+              return false;
+            }
+
+            return true;
+          })
+          .map((item) => item.appointment_time);
 
         setBookedTimes(occupiedTimes);
       } catch (error) {
         console.error(error);
+
         setError("Could not load available appointment times.");
       } finally {
         setLoadingTimes(false);
@@ -95,10 +150,11 @@ export default function PatientBookAppointment() {
     };
 
     fetchBookedTimes();
-  }, [selectedDate, year, month]);
+  }, [selectedDate, year, month, appointment]);
 
   const goToPreviousMonth = () => {
     setCurrentDate(new Date(year, month - 1, 1));
+
     setSelectedDate(null);
     setSelectedTime("");
     setBookedTimes([]);
@@ -108,6 +164,7 @@ export default function PatientBookAppointment() {
 
   const goToNextMonth = () => {
     setCurrentDate(new Date(year, month + 1, 1));
+
     setSelectedDate(null);
     setSelectedTime("");
     setBookedTimes([]);
@@ -137,41 +194,66 @@ export default function PatientBookAppointment() {
       setMessage("");
 
       const appointmentDate = getSelectedDateString();
+
       const appointmentTime = convertTimeTo24Hour(selectedTime);
 
-      await axios.post("http://localhost:5000/api/appointments", {
-        patient_id: user.profile_id,
-        appointment_date: appointmentDate,
-        appointment_time: appointmentTime,
-        reason,
-      });
+      await axios.put(
+        `http://localhost:5000/api/appointments/${appointment.appointment_id}`,
+        {
+          patient_id: user.profile_id,
+          doctor_id: appointment.doctor_id || 1,
+          appointment_date: appointmentDate,
+          appointment_time: appointmentTime,
+          duration_minutes: appointment.duration_minutes || 30,
+          reason: reason,
+          status: "Scheduled",
+        },
+      );
 
-      setMessage("Appointment booked successfully.");
+      setMessage("Appointment rescheduled successfully.");
 
-      setBookedTimes((currentTimes) => [...currentTimes, appointmentTime]);
-
-      setSelectedTime("");
-      setReason("");
+      setTimeout(() => {
+        setSection("appointments");
+      }, 1000);
     } catch (error) {
       console.error(error);
 
       if (error.response?.status === 409) {
-        setError("This time slot has already been booked.");
+        setError("This time slot is already booked.");
       } else {
-        setError(error.response?.data?.error || "Could not book appointment.");
+        setError(
+          error.response?.data?.error || "Could not reschedule appointment.",
+        );
       }
     }
   };
+
+  if (!appointment) {
+    return (
+      <section className="patient-book-page">
+        <div className="patient-book-wrapper">
+          <p>No appointment selected.</p>
+
+          <button type="button" onClick={() => setSection("appointments")}>
+            Back to Appointments
+          </button>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="patient-book-page">
       <div className="patient-book-wrapper">
         <div className="patient-book-heading">
-          <h2>Book an Appointment</h2>
-          <p>Choose a date and time with Dr. Hani Kafaween</p>
+          <h2>Reschedule Appointment</h2>
+
+          <p>Choose a new date and time with Dr. Hani Kafaween</p>
         </div>
 
         <div className="patient-book-grid">
+          {/* CALENDAR */}
+
           <div className="patient-calendar-card">
             <div className="patient-calendar-title">
               <strong>
@@ -206,6 +288,7 @@ export default function PatientBookAppointment() {
 
               {Array.from({ length: daysInMonth }, (_, index) => {
                 const day = index + 1;
+
                 const disabled = isPastDate(day);
 
                 return (
@@ -231,6 +314,8 @@ export default function PatientBookAppointment() {
               })}
             </div>
           </div>
+
+          {/* RIGHT SIDE */}
 
           <div className="patient-book-right">
             <div className="patient-time-card">
@@ -314,9 +399,7 @@ export default function PatientBookAppointment() {
               }
               onClick={handleSubmit}
             >
-              {selectedDate && selectedTime
-                ? "Book Appointment"
-                : "Select a date and time to continue"}
+              Save New Appointment
             </button>
           </div>
         </div>
