@@ -2075,7 +2075,26 @@ html {
 .sidebar-logout:hover {
   color: white;
 }
+.sidebar-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
+  width: 100%;
+
+  background: none;
+  border: none;
+
+  color: inherit;
+  font: inherit;
+
+  text-decoration: none;
+  text-align: left;
+
+  cursor: pointer;
+
+  padding: 0;
+}
 /* =========================
    MAIN DOCTOR AREA
 ========================= */
@@ -8740,5 +8759,245 @@ html {
   .patient-profile-info-grid {
     grid-template-columns: 1fr;
     padding: 30px 24px 35px;
+  }
+}
+.patient-form-card {
+  background: rgb(18, 26, 42);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.patient-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.patient-form-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+}
+
+.patient-form-header p {
+  margin: 6px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.patient-form {
+  width: 100%;
+}
+
+.patient-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.patient-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.patient-form-field label {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.patient-form-field input,
+.patient-form-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+
+  background: rgb(10, 15, 23);
+  color: white;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  font: inherit;
+  outline: none;
+}
+
+.patient-form-field input:focus,
+.patient-form-field select:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+.patient-form-error {
+  color: #ef4444;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.patient-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.patient-form-cancel,
+.patient-form-save {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.patient-form-cancel {
+  background: #334155;
+  color: white;
+}
+
+.patient-form-save {
+  background: rgb(26, 184, 149);
+  color: white;
+  font-weight: 600;
+}
+
+.patient-form-cancel:hover,
+.patient-form-save:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .patient-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-form-actions {
+    flex-direction: column;
+  }
+
+  .patient-form-cancel,
+  .patient-form-save {
+    width: 100%;
+  }
+}
+.appointment-edit-card {
+  background: rgb(18, 26, 42);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.appointment-edit-heading {
+  margin-bottom: 20px;
+}
+
+.appointment-edit-heading h2 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+}
+
+.appointment-edit-heading p {
+  margin: 6px 0 0;
+  color: #94a3b8;
+}
+
+.appointment-edit-form {
+  width: 100%;
+}
+
+.appointment-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.appointment-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.appointment-edit-field label {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.appointment-edit-field input,
+.appointment-edit-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+
+  background: rgb(10, 15, 23);
+  color: white;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  font: inherit;
+  outline: none;
+}
+
+.appointment-edit-field input:focus,
+.appointment-edit-field select:focus {
+  border-color: rgb(26, 184, 149);
+}
+
+.appointment-edit-error {
+  color: #ef4444;
+  margin-top: 16px;
+}
+
+.appointment-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.appointment-edit-cancel,
+.appointment-edit-save {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.appointment-edit-cancel {
+  background: #334155;
+  color: white;
+}
+
+.appointment-edit-save {
+  background: rgb(26, 184, 149);
+  color: white;
+  font-weight: 600;
+}
+
+.appointment-edit-cancel:hover,
+.appointment-edit-save:hover {
+  opacity: 0.9;
+}
+
+.appointment-delete-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .appointment-edit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-edit-actions {
+    flex-direction: column;
+  }
+
+  .appointment-edit-cancel,
+  .appointment-edit-save {
+    width: 100%;
   }
 }

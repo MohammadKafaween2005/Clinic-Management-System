@@ -1,49 +1,77 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
 
 import { DoctorContext } from "../../context/DoctorContext";
 
 export default function TodaySchedule() {
   const { setSection } = useContext(DoctorContext);
 
-  const appointments = [
-    {
-      time: "08:30",
-      initials: "RN",
-      name: "Robert Nguyen",
-      reason: "Blood pressure follow-up",
-      status: "Checked In",
-    },
-    {
-      time: "09:00",
-      initials: "JT",
-      name: "James Thornton",
-      reason: "Annual health check",
-      status: "Completed",
-    },
-    {
-      time: "10:00",
-      initials: "AC",
-      name: "Amelia Chen",
-      reason: "Skin rash assessment",
-      status: "Scheduled",
-    },
-    {
-      time: "11:00",
-      initials: "PS",
-      name: "Priya Sharma",
-      reason: "Mental health review",
-      status: "Scheduled",
-    },
-  ];
+  const [appointments, setAppointments] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/appointments")
+      .then((response) => {
+        setAppointments(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  const today = new Date();
+  const todayString = today.toISOString().split("T")[0];
+
+  const todayAppointments = appointments
+    .filter((appointment) => {
+      const appointmentDate = appointment.appointment_date?.split("T")[0];
+
+      return appointmentDate === todayString;
+    })
+    .sort((a, b) => a.appointment_time.localeCompare(b.appointment_time));
+
+  const formatTime = (time) => {
+    if (!time) return "";
+
+    const [hoursString, minutes] = time.split(":");
+
+    let hours = Number(hoursString);
+
+    const period = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12;
+
+    if (hours === 0) {
+      hours = 12;
+    }
+
+    return `${String(hours).padStart(2, "0")}:${minutes} ${period}`;
+  };
+
+  const getInitials = (firstName, lastName) => {
+    const first = firstName?.charAt(0) || "";
+    const last = lastName?.charAt(0) || "";
+
+    return `${first}${last}`.toUpperCase();
+  };
+
+  const formattedDate = today.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
 
   return (
     <div className="today-schedule-card">
-
       <div className="dashboard-card-heading">
-
         <div>
           <h2>Today's Schedule</h2>
-          <p>Thursday, August 14 · 2026</p>
+          <p>{formattedDate}</p>
         </div>
 
         <button
@@ -52,47 +80,46 @@ export default function TodaySchedule() {
         >
           View all →
         </button>
-
       </div>
-
 
       <div className="today-schedule-list">
-
-        {appointments.map((appointment) => (
-          <div
-            className="today-schedule-row"
-            key={appointment.time}
-          >
-
-            <span className="today-time">
-              {appointment.time}
-            </span>
-
-
-            <div className="today-patient-avatar">
-              {appointment.initials}
-            </div>
-
-
-            <div className="today-patient-info">
-              <h3>{appointment.name}</h3>
-              <p>{appointment.reason}</p>
-            </div>
-
-
-            <span
-              className={`dashboard-status ${appointment.status
-                .toLowerCase()
-                .replace(" ", "-")}`}
+        {loading ? (
+          <p>Loading today's appointments...</p>
+        ) : todayAppointments.length === 0 ? (
+          <p>No appointments scheduled for today.</p>
+        ) : (
+          todayAppointments.map((appointment) => (
+            <div
+              className="today-schedule-row"
+              key={appointment.appointment_id}
             >
-              ● {appointment.status}
-            </span>
+              <span className="today-time">
+                {formatTime(appointment.appointment_time)}
+              </span>
 
-          </div>
-        ))}
+              <div className="today-patient-avatar">
+                {getInitials(appointment.first_name, appointment.last_name)}
+              </div>
 
+              <div className="today-patient-info">
+                <h3>
+                  {appointment.first_name} {appointment.last_name}
+                </h3>
+
+                <p>{appointment.reason || "No reason provided"}</p>
+              </div>
+
+              <span
+                className={`dashboard-status ${appointment.status
+                  .toLowerCase()
+                  .replaceAll(" ", "-")}`}
+              >
+                ● {appointment.status}
+              </span>
+            </div>
+          ))
+        )}
       </div>
-
     </div>
   );
 }

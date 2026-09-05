@@ -2,17 +2,15 @@ import NextPatientCard from "./NextPatientCard";
 import TodaySchedule from "./TodaySchedule";
 import DashboardSidePanel from "./DashboardSidePanel";
 
-export default function DoctorHome() {
+export default function DoctorHome({ setSelectedPatientId }) {
   return (
     <section className="doctor-home">
-
-      <NextPatientCard />
+      <NextPatientCard setSelectedPatientId={setSelectedPatientId} />
 
       <div className="doctor-home-grid">
         <TodaySchedule />
         <DashboardSidePanel />
       </div>
-
     </section>
   );
 }
