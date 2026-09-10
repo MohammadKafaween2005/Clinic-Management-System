@@ -33,7 +33,14 @@ function App() {
             </ProtectedRoute>
           }
         />{" "}
-        <Route path="/Receptionist" element={<Receptionist />} />
+        <Route
+          path="/Receptionist"
+          element={
+            <ProtectedRoute allowedRole="receptionist">
+              <Receptionist />
+            </ProtectedRoute>
+          }
+        />{" "}
         <Route
           path="/Patient"
           element={
