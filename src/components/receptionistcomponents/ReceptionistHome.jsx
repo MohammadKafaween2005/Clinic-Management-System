@@ -16,8 +16,8 @@ export default function ReceptionistHome({ setSelectedPatientId }) {
         setLoading(true);
 
         const [appointmentsResponse, patientsResponse] = await Promise.all([
-          axios.get("http://localhost:5000/api/appointments"),
-          axios.get("http://localhost:5000/api/patients"),
+          axios.get(`${import.meta.env.VITE_API_URL}/api/appointments`),
+          axios.get(`${import.meta.env.VITE_API_URL}/api/patients`),
         ]);
 
         setAppointments(appointmentsResponse.data);
@@ -132,7 +132,7 @@ export default function ReceptionistHome({ setSelectedPatientId }) {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/appointments/${appointment.appointment_id}`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${appointment.appointment_id}`,
         {
           patient_id: appointment.patient_id,
 
@@ -186,7 +186,7 @@ export default function ReceptionistHome({ setSelectedPatientId }) {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/appointments/${appointment.appointment_id}/cancel`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${appointment.appointment_id}/cancel`,
       );
 
       setAppointments((previousAppointments) =>

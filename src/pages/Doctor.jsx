@@ -33,8 +33,9 @@ function DoctorPage() {
         {section === "home" && (
           <DoctorHome setSelectedPatientId={setSelectedPatientId} />
         )}
-        {section === "schedule" && <DoctorSchedule />}
-
+        {section === "schedule" && (
+          <DoctorSchedule setSelectedPatientId={setSelectedPatientId} />
+        )}
         {section === "patients" && (
           <DoctorPatients setSelectedPatientId={setSelectedPatientId} />
         )}

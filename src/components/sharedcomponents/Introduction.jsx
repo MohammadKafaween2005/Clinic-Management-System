@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
-import DoctorImage from "../../assets/IMG1.png"
+import DoctorImage from "../../assets/IMG1.png";
 export default function Introduction() {
   return (
     <div className="intro">
       <div className="intro-left">
-        <p className="welcome-new-patients"> ● Accepting New Patients </p>
+        <div className="alert clinic-alert text-center" role="alert">
+          We are currently accepting new patients.
+        </div>
+        {/* boostrap */}
         <h1 className="title">Your Health Deserves,</h1>
         <h1 className="title2">Personal Attention</h1>
         <p className="intro-para">

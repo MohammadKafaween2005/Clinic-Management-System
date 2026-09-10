@@ -20,7 +20,7 @@ export default function ReceptionistSidebar() {
         }
 
         const response = await axios.get(
-          `http://localhost:5000/api/profile/receptionist/${user.profile_id}`,
+          `${import.meta.env.VITE_API_URL}/api/profile/receptionist/${user.profile_id}`,
         );
 
         setProfile(response.data);

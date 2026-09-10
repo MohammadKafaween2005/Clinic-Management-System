@@ -32,15 +32,15 @@ export default function DoctorViewRecord({ patientId }) {
         setError("");
 
         const patientResponse = await axios.get(
-          `http://localhost:5000/api/patients/${patientId}`,
+          `${import.meta.env.VITE_API_URL}/api/patients/${patientId}`,
         );
 
         const appointmentsResponse = await axios.get(
-          `http://localhost:5000/api/appointments/patient/${patientId}`,
+          `${import.meta.env.VITE_API_URL}/api/appointments/patient/${patientId}`,
         );
 
         const recordsResponse = await axios.get(
-          `http://localhost:5000/api/medical-records/patient/${patientId}`,
+          `${import.meta.env.VITE_API_URL}/api/medical-records/patient/${patientId}`,
         );
 
         setPatient(patientResponse.data);
@@ -161,7 +161,7 @@ export default function DoctorViewRecord({ patientId }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/medical-records",
+        `${import.meta.env.VITE_API_URL}/api/medical-records`,
         {
           patient_id: patientId,
           diagnosis,

@@ -78,7 +78,7 @@ export default function PatientBookAppointment() {
         const appointmentDate = getSelectedDateString();
 
         const response = await axios.get(
-          `http://localhost:5000/api/appointments/date/${appointmentDate}`,
+          `${import.meta.env.VITE_API_URL}/api/appointments/date/${appointmentDate}`,
         );
 
         const occupiedTimes = response.data
@@ -139,7 +139,7 @@ export default function PatientBookAppointment() {
       const appointmentDate = getSelectedDateString();
       const appointmentTime = convertTimeTo24Hour(selectedTime);
 
-      await axios.post("http://localhost:5000/api/appointments", {
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/appointments`, {
         patient_id: user.profile_id,
         appointment_date: appointmentDate,
         appointment_time: appointmentTime,

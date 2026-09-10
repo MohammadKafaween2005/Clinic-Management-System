@@ -23,9 +23,9 @@ export default function ReceptionistPatientProfile({ patientId }) {
         setError("");
 
         const [patientResponse, appointmentsResponse] = await Promise.all([
-          axios.get(`http://localhost:5000/api/patients/${patientId}`),
+          axios.get(`${import.meta.env.VITE_API_URL}/api/patients/${patientId}`),
           axios.get(
-            `http://localhost:5000/api/appointments/patient/${patientId}`,
+            `${import.meta.env.VITE_API_URL}/api/appointments/patient/${patientId}`,
           ),
         ]);
 

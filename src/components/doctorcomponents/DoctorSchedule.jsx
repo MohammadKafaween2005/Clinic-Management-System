@@ -20,26 +20,19 @@ export default function DoctorSchedule({ setSelectedPatientId }) {
     reason: "",
     status: "",
   });
-
   useEffect(() => {
-    fetchAppointments();
+    axios
+      .get(`${import.meta.env.VITE_API_URL}/api/appointments`)
+      .then((response) => {
+        setAppointments(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
-
-  const fetchAppointments = async () => {
-    try {
-      setLoading(true);
-
-      const response = await axios.get(
-        "http://localhost:5000/api/appointments",
-      );
-
-      setAppointments(response.data);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const formatTime = (time) => {
     if (!time) return "";
@@ -105,7 +98,7 @@ export default function DoctorSchedule({ setSelectedPatientId }) {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/appointments/${editingAppointment.appointment_id}`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${editingAppointment.appointment_id}`,
         {
           patient_id: editingAppointment.patient_id,
           doctor_id: editingAppointment.doctor_id,
@@ -166,7 +159,7 @@ export default function DoctorSchedule({ setSelectedPatientId }) {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/appointments/${appointment.appointment_id}/cancel`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${appointment.appointment_id}/cancel`,
       );
 
       setAppointments((previousAppointments) =>

@@ -10,7 +10,7 @@ export default function NextPatientCard({ setSelectedPatientId }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/appointments")
+      .get(`${import.meta.env.VITE_API_URL}/api/appointments`)
       .then((response) => {
         setAppointments(response.data);
       })
@@ -128,7 +128,7 @@ export default function NextPatientCard({ setSelectedPatientId }) {
   const handleStartConsultation = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/appointments/${nextPatient.appointment_id}`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${nextPatient.appointment_id}`,
         {
           patient_id: nextPatient.patient_id,
           doctor_id: nextPatient.doctor_id,

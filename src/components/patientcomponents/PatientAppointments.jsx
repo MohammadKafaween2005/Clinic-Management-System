@@ -16,7 +16,7 @@ export default function PatientAppointments({ setSelectedAppointment }) {
     const fetchAppointments = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/appointments/patient/${user.profile_id}`,
+          `${import.meta.env.VITE_API_URL}/api/appointments/patient/${user.profile_id}`,
         );
 
         setAppointments(response.data);
@@ -34,7 +34,7 @@ export default function PatientAppointments({ setSelectedAppointment }) {
   const handleCancel = async (appointmentId) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/appointments/${appointmentId}/cancel`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${appointmentId}/cancel`,
       );
 
       setAppointments((currentAppointments) =>

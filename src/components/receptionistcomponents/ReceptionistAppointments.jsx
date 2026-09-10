@@ -11,16 +11,12 @@ export default function ReceptionistAppointments({ setSelectedPatientId }) {
   const [statusFilter, setStatusFilter] = useState("All");
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchAppointments();
-  }, []);
-
   const fetchAppointments = async () => {
     try {
       setLoading(true);
 
       const response = await axios.get(
-        "http://localhost:5000/api/appointments",
+        `${import.meta.env.VITE_API_URL}/api/appointments`,
       );
 
       setAppointments(response.data);
@@ -30,6 +26,9 @@ export default function ReceptionistAppointments({ setSelectedPatientId }) {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    fetchAppointments();
+  }, []);
 
   const formatTime = (time) => {
     if (!time) return "";
@@ -89,7 +88,7 @@ export default function ReceptionistAppointments({ setSelectedPatientId }) {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/appointments/${appointment.appointment_id}`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${appointment.appointment_id}`,
         {
           patient_id: appointment.patient_id,
           doctor_id: appointment.doctor_id,
@@ -138,7 +137,7 @@ export default function ReceptionistAppointments({ setSelectedPatientId }) {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/appointments/${appointment.appointment_id}/cancel`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${appointment.appointment_id}/cancel`,
       );
 
       setAppointments((previousAppointments) =>
