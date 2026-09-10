@@ -113,24 +113,22 @@ export default function PatientReschedule({ appointment }) {
       return;
     }
 
-    const fetchBookedTimes = async () => {
-      try {
-        setLoadingTimes(true);
-        setError("");
+    const appointmentDate = `${year}-${String(month + 1).padStart(
+      2,
+      "0",
+    )}-${String(selectedDate).padStart(2, "0")}`;
 
-        const appointmentDate = getSelectedDateString();
-
-        const response = await axios.get(
-          `http://localhost:5000/api/appointments/date/${appointmentDate}`,
-        );
-
+    axios
+      .get(
+        `${import.meta.env.VITE_API_URL}/api/appointments/date/${appointmentDate}`,
+      )
+      .then((response) => {
         const occupiedTimes = response.data
           .filter((item) => {
             if (item.status === "Cancelled") {
               return false;
             }
 
-            // Do not count the appointment we are currently editing
             if (item.appointment_id === appointment.appointment_id) {
               return false;
             }
@@ -140,16 +138,14 @@ export default function PatientReschedule({ appointment }) {
           .map((item) => item.appointment_time);
 
         setBookedTimes(occupiedTimes);
-      } catch (error) {
+      })
+      .catch((error) => {
         console.error(error);
-
         setError("Could not load available appointment times.");
-      } finally {
+      })
+      .finally(() => {
         setLoadingTimes(false);
-      }
-    };
-
-    fetchBookedTimes();
+      });
   }, [selectedDate, year, month, appointment]);
 
   const goToPreviousMonth = () => {
@@ -198,7 +194,7 @@ export default function PatientReschedule({ appointment }) {
       const appointmentTime = convertTimeTo24Hour(selectedTime);
 
       await axios.put(
-        `http://localhost:5000/api/appointments/${appointment.appointment_id}`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${appointment.appointment_id}`,
         {
           patient_id: user.profile_id,
           doctor_id: appointment.doctor_id || 1,

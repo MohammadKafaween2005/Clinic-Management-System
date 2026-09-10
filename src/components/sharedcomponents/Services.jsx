@@ -8,7 +8,12 @@ export default function Services() {
       <div className="services-grid">
         <div className="service-card">
           <span className="service-icon">🩺</span>
-          <h3>General Consultations</h3>
+
+          <h3>
+            General Consultations{" "}
+            <span className="badge bg-success">Popular</span>
+          </h3>
+{/* bootstrap */}
           <p>
             Evidence-based care tailored to your individual needs and health
             goals.
@@ -25,7 +30,12 @@ export default function Services() {
 
         <div className="service-card">
           <span className="service-icon">🔬</span>
-          <h3>Preventive Health Checks</h3>
+
+          <h3>
+            Preventive Health Checks{" "}
+            <span className="badge bg-success">Recommended</span>
+          </h3>
+{/* bootstrap */}
           <p>
             Routine health assessments focused on prevention and early
             detection.

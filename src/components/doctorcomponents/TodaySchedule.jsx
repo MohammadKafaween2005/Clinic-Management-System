@@ -11,7 +11,7 @@ export default function TodaySchedule() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/appointments")
+      .get(`${import.meta.env.VITE_API_URL}/api/appointments`)
       .then((response) => {
         setAppointments(response.data);
       })

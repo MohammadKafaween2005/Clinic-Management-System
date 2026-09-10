@@ -28,7 +28,7 @@ export default function PatientHeader() {
     const fetchPatient = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/profile/patient/${user.profile_id}`,
+          `${import.meta.env.VITE_API_URL}/api/profile/patient/${user.profile_id}`,
         );
 
         setPatient(response.data);

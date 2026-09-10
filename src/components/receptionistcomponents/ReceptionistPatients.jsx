@@ -27,19 +27,15 @@ export default function ReceptionistPatients({ setSelectedPatientId }) {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   const fetchData = async () => {
     try {
       setLoading(true);
       setError("");
 
       const [patientsResponse, appointmentsResponse] = await Promise.all([
-        axios.get("http://localhost:5000/api/patients"),
+        axios.get(`${import.meta.env.VITE_API_URL}/api/patients`),
 
-        axios.get("http://localhost:5000/api/appointments"),
+        axios.get(`${import.meta.env.VITE_API_URL}/api/appointments`),
       ]);
 
       setPatients(patientsResponse.data);
@@ -52,6 +48,9 @@ export default function ReceptionistPatients({ setSelectedPatientId }) {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const formatDate = (date) => {
     if (!date) {
@@ -211,7 +210,7 @@ export default function ReceptionistPatients({ setSelectedPatientId }) {
       setMessage("");
 
       const response = await axios.put(
-        `http://localhost:5000/api/patients/${editingPatient.patient_id}`,
+        `${import.meta.env.VITE_API_URL}/api/patients/${editingPatient.patient_id}`,
         {
           first_name: formData.first_name.trim(),
 

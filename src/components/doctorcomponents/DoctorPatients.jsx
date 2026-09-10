@@ -32,11 +32,11 @@ export default function DoctorPatients({ setSelectedPatientId }) {
         setLoading(true);
 
         const patientsResponse = await axios.get(
-          "http://localhost:5000/api/patients",
+          `${import.meta.env.VITE_API_URL}/api/patients`,
         );
 
         const appointmentsResponse = await axios.get(
-          "http://localhost:5000/api/appointments",
+          `${import.meta.env.VITE_API_URL}/api/appointments`,
         );
 
         setPatients(patientsResponse.data);
@@ -217,7 +217,7 @@ export default function DoctorPatients({ setSelectedPatientId }) {
     try {
       if (editingPatient) {
         const response = await axios.put(
-          `http://localhost:5000/api/patients/${editingPatient.patient_id}`,
+          `${import.meta.env.VITE_API_URL}api/patients/${editingPatient.patient_id}`,
           formData,
         );
 
@@ -230,7 +230,7 @@ export default function DoctorPatients({ setSelectedPatientId }) {
         );
       } else {
         const response = await axios.post(
-          "http://localhost:5000/api/patients",
+          `${import.meta.env.VITE_API_URL}api/patients`,
           formData,
         );
 
@@ -260,7 +260,7 @@ export default function DoctorPatients({ setSelectedPatientId }) {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/patients/${patient.patient_id}`,
+        `${import.meta.env.VITE_API_URL}/api/patients/${patient.patient_id}`,
       );
 
       setPatients((previousPatients) =>

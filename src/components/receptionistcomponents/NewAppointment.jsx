@@ -77,7 +77,7 @@ export default function NewAppointment() {
       try {
         setLoadingPatients(true);
 
-        const response = await axios.get("http://localhost:5000/api/patients");
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/patients`);
 
         setPatients(response.data);
       } catch (error) {
@@ -116,7 +116,7 @@ export default function NewAppointment() {
         const date = `${currentYear}-${month}-${day}`;
 
         const response = await axios.get(
-          `http://localhost:5000/api/appointments/date/${date}`,
+          `${import.meta.env.VITE_API_URL}/api/appointments/date/${date}`,
         );
 
         const occupiedTimes = response.data
@@ -224,7 +224,7 @@ export default function NewAppointment() {
 
       const appointmentDate = formatSelectedDate();
 
-      await axios.post("http://localhost:5000/api/appointments", {
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/appointments`, {
         patient_id: Number(selectedPatientId),
         appointment_date: appointmentDate,
         appointment_time: selectedTime,

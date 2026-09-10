@@ -17,11 +17,11 @@ export default function PatientHome({ setSelectedAppointment }) {
         setError("");
 
         const profileResponse = await axios.get(
-          `http://localhost:5000/api/profile/patient/${user.profile_id}`,
+          `${import.meta.env.VITE_API_URL}/api/profile/patient/${user.profile_id}`,
         );
 
         const appointmentsResponse = await axios.get(
-          `http://localhost:5000/api/appointments/patient/${user.profile_id}`,
+          `${import.meta.env.VITE_API_URL}/api/appointments/patient/${user.profile_id}`,
         );
 
         setPatient(profileResponse.data);
@@ -110,7 +110,7 @@ export default function PatientHome({ setSelectedAppointment }) {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/appointments/${upcomingAppointment.appointment_id}/cancel`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${upcomingAppointment.appointment_id}/cancel`,
       );
 
       setAppointments((currentAppointments) =>

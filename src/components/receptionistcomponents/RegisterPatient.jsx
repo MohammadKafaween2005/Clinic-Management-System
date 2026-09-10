@@ -26,7 +26,7 @@ export default function RegisterPatient() {
       setError("");
       setMessage("");
 
-      await axios.post("http://localhost:5000/api/patients", {
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/patients`, {
         first_name: firstName.trim(),
         last_name: lastName.trim(),
         date_of_birth: dateOfBirth || null,

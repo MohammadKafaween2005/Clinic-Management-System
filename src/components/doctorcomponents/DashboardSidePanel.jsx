@@ -17,7 +17,7 @@ export default function DashboardSidePanel() {
 
         // Get all patients
         const patientsResponse = await axios.get(
-          "http://localhost:5000/api/patients",
+          `${import.meta.env.VITE_API_URL}/api/patients`,
         );
 
         const patientData = patientsResponse.data;
@@ -26,7 +26,7 @@ export default function DashboardSidePanel() {
 
         // Get all appointments
         const appointmentsResponse = await axios.get(
-          "http://localhost:5000/api/appointments",
+          `${import.meta.env.VITE_API_URL}/api/appointments`,
         );
 
         setAppointments(appointmentsResponse.data);
@@ -34,7 +34,7 @@ export default function DashboardSidePanel() {
         // Get medical records for every patient
         const recordRequests = patientData.map((patient) =>
           axios.get(
-            `http://localhost:5000/api/medical-records/patient/${patient.patient_id}`,
+            `${import.meta.env.VITE_API_URL}/api/medical-records/patient/${patient.patient_id}`,
           ),
         );
 

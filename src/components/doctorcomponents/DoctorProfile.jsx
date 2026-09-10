@@ -16,7 +16,7 @@ export default function DoctorProfile() {
     }
 
     axios
-      .get(`http://localhost:5000/api/profile/doctor/${user.profile_id}`)
+      .get(`${import.meta.env.VITE_API_URL}/api/profile/doctor/${user.profile_id}`)
       .then((response) => {
         setDoctor(response.data);
       })
